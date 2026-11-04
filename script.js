@@ -70,3 +70,35 @@
   window.addEventListener('resize', sync);
   sync();
 })();
+
+// Paddle In-Page Checkout
+(function () {
+  function initPaddle() {
+    if (typeof Paddle === 'undefined') return;
+    Paddle.Initialize({
+      token: 'live_12b9b9abaf8b079c81bef3ee62c'
+    });
+
+    function openCheckout(e) {
+      if (e) e.preventDefault();
+      Paddle.Checkout.open({
+        items: [{ priceId: 'pri_01m6jb21v55z92dpnzsjek4yj1', quantity: 1 }],
+        settings: {
+          displayMode: 'overlay',
+          theme: 'dark',
+          locale: 'en'
+        }
+      });
+    }
+
+    document.querySelectorAll('.nav-buy, .btn.primary').forEach(function (btn) {
+      btn.addEventListener('click', openCheckout);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPaddle);
+  } else {
+    initPaddle();
+  }
+})();
