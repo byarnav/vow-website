@@ -99,16 +99,12 @@
         items: [{ priceId: 'pri_01m6jb21v55z92dpnzsjek4yj1', quantity: 1 }]
       }).then(function (result) {
         if (!result || !result.data) return;
-        var formatted = null;
-        if (result.data.details && result.data.details.lineItems && result.data.details.lineItems[0]) {
-          var item = result.data.details.lineItems[0];
-          formatted = (item.formattedTotals && item.formattedTotals.total) ||
-                      (item.totals && item.totals.total);
-        }
-        if (!formatted && result.data.details && result.data.details.totals) {
-          formatted = (result.data.details.formattedTotals && result.data.details.formattedTotals.total) ||
-                      result.data.details.totals.total;
-        }
+        var details = result.data.details || {};
+        var lineItem = (details.lineItems && details.lineItems[0]) || (details.line_items && details.line_items[0]) || {};
+        var formatted = (lineItem.formattedTotals && lineItem.formattedTotals.total) ||
+                        (lineItem.formatted_totals && lineItem.formatted_totals.total) ||
+                        (details.formattedTotals && details.formattedTotals.total) ||
+                        (details.formatted_totals && details.formatted_totals.total);
         if (formatted) {
           document.querySelectorAll('[data-price-text]').forEach(function (el) {
             el.textContent = formatted;
