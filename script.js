@@ -71,24 +71,63 @@
   sync();
 })();
 
-// Paddle In-Page Checkout
+// Paddle In-Page Checkout & Localized Price Preview
 (function () {
-  var paddleAttempts = 0;
+  var token = 'live_12b9b9abaf8b079c81bef3ee62c';
+  var priceId = 'pri_01m6jb21v55z92dpnzsjek4yj1';
+
+  var money = function (cur, amount) {
+    try {
+      var digits = new Intl.NumberFormat('en', { style: 'currency', currency: cur }).resolvedOptions().maximumFractionDigits;
+      return new Intl.NumberFormat(navigator.language || 'en', {
+        style: 'currency',
+        currency: cur,
+        minimumFractionDigits: 0,
+        maximumFractionDigits: digits
+      }).format(amount);
+    } catch (e) {
+      return (cur === 'INR' ? '₹' : (cur === 'USD' ? '$' : cur + ' ')) + amount;
+    }
+  };
+
   function initPaddle() {
     if (typeof Paddle === 'undefined') {
-      if (paddleAttempts++ < 50) {
-        setTimeout(initPaddle, 100);
-      }
+      setTimeout(initPaddle, 100);
       return;
     }
+
     Paddle.Initialize({
-      token: 'live_12b9b9abaf8b079c81bef3ee62c'
+      token: token
+    });
+
+    // Localize the price buttons on the page to visitor's currency
+    Paddle.PricePreview({
+      items: [{ priceId: priceId, quantity: 1 }]
+    }).then(function (r) {
+      if (!r || !r.data || !r.data.details) return;
+      var cur = r.data.currencyCode || 'USD';
+      var lineItem = (r.data.details.lineItems && r.data.details.lineItems[0]) ||
+                     (r.data.details.line_items && r.data.details.line_items[0]);
+      if (!lineItem) return;
+      var totals = lineItem.totals || lineItem.unit_totals;
+      if (!totals) return;
+      var minor = totals.total;
+      var digits = new Intl.NumberFormat('en', { style: 'currency', currency: cur }).resolvedOptions().maximumFractionDigits || 2;
+      var amount = Number(minor) / Math.pow(10, digits);
+      if (!isFinite(amount) || amount <= 0) return;
+      var formatted = money(cur, amount);
+
+      document.querySelectorAll('[data-price-text]').forEach(function (el) {
+        el.textContent = formatted;
+      });
+    }).catch(function (err) {
+      console.warn('Paddle price preview error:', err);
     });
 
     function openCheckout(e) {
       if (e) e.preventDefault();
       Paddle.Checkout.open({
-        items: [{ priceId: 'pri_01m6jb21v55z92dpnzsjek4yj1', quantity: 1 }],
+        items: [{ priceId: priceId, quantity: 1 }],
         settings: {
           displayMode: 'overlay',
           theme: 'system',
@@ -98,30 +137,6 @@
         }
       });
     }
-
-    function updatePricePreview() {
-      if (typeof Paddle === 'undefined' || !Paddle.PricePreview) return;
-      Paddle.PricePreview({
-        items: [{ priceId: 'pri_01m6jb21v55z92dpnzsjek4yj1', quantity: 1 }]
-      }).then(function (result) {
-        if (!result || !result.data) return;
-        var details = result.data.details || {};
-        var lineItem = (details.lineItems && details.lineItems[0]) || (details.line_items && details.line_items[0]) || {};
-        var formatted = (lineItem.formattedTotals && lineItem.formattedTotals.total) ||
-                        (lineItem.formatted_totals && lineItem.formatted_totals.total) ||
-                        (details.formattedTotals && details.formattedTotals.total) ||
-                        (details.formatted_totals && details.formatted_totals.total);
-        if (formatted) {
-          document.querySelectorAll('[data-price-text]').forEach(function (el) {
-            el.textContent = formatted;
-          });
-        }
-      }).catch(function (err) {
-        console.warn('Paddle price preview error:', err);
-      });
-    }
-
-    updatePricePreview();
 
     document.querySelectorAll('.nav-buy, .btn.primary').forEach(function (btn) {
       btn.addEventListener('click', openCheckout);
