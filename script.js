@@ -73,8 +73,14 @@
 
 // Paddle In-Page Checkout
 (function () {
+  var paddleAttempts = 0;
   function initPaddle() {
-    if (typeof Paddle === 'undefined') return;
+    if (typeof Paddle === 'undefined') {
+      if (paddleAttempts++ < 50) {
+        setTimeout(initPaddle, 100);
+      }
+      return;
+    }
     Paddle.Initialize({
       token: 'live_12b9b9abaf8b079c81bef3ee62c'
     });
