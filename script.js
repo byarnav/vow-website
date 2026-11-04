@@ -93,6 +93,34 @@
       });
     }
 
+    function updatePricePreview() {
+      if (typeof Paddle === 'undefined' || !Paddle.PricePreview) return;
+      Paddle.PricePreview({
+        items: [{ priceId: 'pri_01m6jb21v55z92dpnzsjek4yj1', quantity: 1 }]
+      }).then(function (result) {
+        if (!result || !result.data) return;
+        var formatted = null;
+        if (result.data.details && result.data.details.lineItems && result.data.details.lineItems[0]) {
+          var item = result.data.details.lineItems[0];
+          formatted = (item.formattedTotals && item.formattedTotals.total) ||
+                      (item.totals && item.totals.total);
+        }
+        if (!formatted && result.data.details && result.data.details.totals) {
+          formatted = (result.data.details.formattedTotals && result.data.details.formattedTotals.total) ||
+                      result.data.details.totals.total;
+        }
+        if (formatted) {
+          document.querySelectorAll('[data-price-text]').forEach(function (el) {
+            el.textContent = formatted;
+          });
+        }
+      }).catch(function (err) {
+        console.warn('Paddle price preview error:', err);
+      });
+    }
+
+    updatePricePreview();
+
     document.querySelectorAll('.nav-buy, .btn.primary').forEach(function (btn) {
       btn.addEventListener('click', openCheckout);
     });
