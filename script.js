@@ -86,7 +86,9 @@
         settings: {
           displayMode: 'overlay',
           theme: 'system',
-          locale: 'en'
+          locale: 'en',
+          showAddDiscounts: false,
+          showAddTaxId: true
         }
       });
     }
