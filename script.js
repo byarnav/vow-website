@@ -85,7 +85,7 @@
         items: [{ priceId: 'pri_01m6jb21v55z92dpnzsjek4yj1', quantity: 1 }],
         settings: {
           displayMode: 'overlay',
-          theme: 'dark',
+          theme: 'system',
           locale: 'en'
         }
       });
