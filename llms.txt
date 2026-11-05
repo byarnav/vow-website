@@ -10,7 +10,7 @@ Vow is not a website blocklist. It takes the whole Mac offline, so every browser
 - Session length: 5 minutes to 24 hours. Presets for 15 min, 30 min, 1 hr and 2 hr, or a custom duration. Recurring schedules are built in (for example, weekdays at 9:00 for 2 hours).
 - What keeps working offline: local files and apps, localhost and the loopback interface (local dev servers, local containers via localhost ports), local AI models such as Ollama, and Bluetooth devices (AirPods, mice, keyboards, Apple Watch). Messaging apps stay open, so old messages can still be read.
 - No instant cancel: you can request an early unlock, and the Mac then stays offline for 15 more minutes before the internet returns. The request can be cancelled during those 15 minutes.
-- Persistence: closing the window, quitting Vow or restarting the Mac does not end a session. A background helper (about 12 MB of memory, around 0.1% CPU) keeps the timer running.
+- Persistence: closing the window, quitting Vow or restarting the Mac does not end a session. A small background helper keeps the timer running.
 - Fail-open safety: if Vow's saved session data is ever damaged, it restores the internet instead of leaving the Mac stuck offline.
 - Network settings: Vow never changes proxies, /etc/hosts, VPN or DNS settings. When a session ends, the network returns exactly as it was.
 - Privacy: no account, no analytics, no tracking. Vow goes online for only two things, checking for updates and verifying the license key, and never during a session.
