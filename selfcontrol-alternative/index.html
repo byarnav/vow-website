@@ -106,6 +106,14 @@
             "@type": "Answer",
             "text": "No. Vow requires macOS 26 or later on a Mac with Apple Silicon. SelfControl supports much older versions of macOS."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SelfControl compatible with VPNs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, SelfControl will not block websites properly if you're using a VPN. This is not technically feasible, unfortunately. If you are using a \"partial VPN\" like Junos Pulse Secure or Cisco AnyConnect to connect to corporate/university servers, please ensure it is disconnected while SelfControl runs. These applications have a tendency to save your networking state when they connect and restore to that state when they disconnect - so if you turn them on while SelfControl's running, and turn them off after it finishes, your block may \"mysteriously\" come back."
+          }
         }
       ]
     }
@@ -197,6 +205,11 @@
     <details>
       <summary>Does Vow work on older Macs like SelfControl does?</summary>
       <p>No. Vow requires macOS 26 or later on a Mac with Apple Silicon. SelfControl supports much older versions of macOS.</p>
+    </details>
+    <details>
+      <summary>Is SelfControl compatible with VPNs?</summary>
+      <p>No, SelfControl will not block websites properly if you're using a VPN. This is not technically feasible, unfortunately.</p>
+      <p>If you are using a "partial VPN" like Junos Pulse Secure or Cisco AnyConnect to connect to corporate/university servers, please ensure it is disconnected while SelfControl runs. These applications have a tendency to save your networking state when they connect and restore to that state when they disconnect - so if you turn them on while SelfControl's running, and turn them off after it finishes, your block may "mysteriously" come back.</p>
     </details>
   </div>
   <div class="article-cta">
