@@ -338,8 +338,6 @@ details p + p { margin-top: -8px; }
   .foot-mail { display: block; white-space: normal; }
   .foot-mail .dot { display: none; }
   nav { gap: 14px; }
-  nav a:not(.nav-buy):nth-child(1),
-  nav a:not(.nav-buy):nth-child(5) { display: none; }
   .vow-card { border-radius: 20px; padding: 14px 16px; }
   .bento-prose, .bento-dark, .bento-table, .price { padding: 28px 22px; border-radius: 22px; }
   .bento-grid-3 { grid-template-columns: 1fr; }
@@ -775,3 +773,7 @@ details p + p { margin-top: -8px; }
 @media (prefers-reduced-motion: reduce) {
   .sheet[open] { animation: none; }
 }
+
+/* Brand mark with app icon */
+.bar .mark { display: inline-flex; align-items: center; gap: 8px; }
+.bar .mark-icon { display: block; width: 28px; height: 28px; flex: none; }

@@ -6,11 +6,10 @@
 <title>Vow — Turn off the internet on your Mac</title>
 <meta name="description" content="Vow turns off your Mac's internet and keeps it off until your timer ends. No extensions, no account, no subscription. $9.99 once.">
 <meta name="color-scheme" content="light dark">
-<link rel="icon" href="images/favicon-16.png" sizes="16x16" type="image/png">
 <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/favicon-16.png" sizes="16x16" type="image/png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
 <style>
 :root {
@@ -308,8 +307,6 @@ details p + p { margin-top: -8px; }
   .foot-mail { display: block; white-space: normal; }
   .foot-mail .dot { display: none; }
   nav { gap: 14px; }
-  nav a:not(.nav-buy):nth-child(1),
-  nav a:not(.nav-buy):nth-child(5) { display: none; }
   .bento-prose, .bento-dark, .bento-table, .price { padding: 28px 22px; border-radius: 22px; }
   .bento-grid-3 { grid-template-columns: 1fr; }
   .list div { grid-template-columns: 1fr; gap: 6px; }
@@ -418,14 +415,11 @@ details p + p { margin-top: -8px; }
 
 <header class="bar">
   <div class="wrap-wide bar-inner">
-    <a href="#top" class="mark">Vow</a>
+    <a href="#top" class="mark"><img src="images/app-icon.png" width="28" height="28" alt="" class="mark-icon"><span>Vow</span></a>
     <nav aria-label="Primary">
-      <a href="#how">How It Works</a>
       <a href="#compare">Compare</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
       <a href="#pricing" class="nav-buy" data-paddle-checkout>Buy</a>
     </nav>
   </div>
@@ -623,7 +617,7 @@ details p + p { margin-top: -8px; }
   <section class="wrap-wide" id="pricing" aria-labelledby="buy-h">
     <div class="closing-grid">
       <article class="bento-card buy-card">
-        <img src="images/favicon.svg" width="88" height="88" alt="" class="buy-icon">
+        <img src="images/app-icon.png" width="88" height="88" alt="" class="buy-icon">
         <h2 id="buy-h">Vow</h2>
         <p class="buy-price"><span data-price-text>$9.99</span></p>
         <ul class="buy-list">
@@ -738,7 +732,7 @@ details p + p { margin-top: -8px; }
 
 <dialog id="lost-key" class="sheet" aria-labelledby="lost-key-h">
   <form class="sheet-form" novalidate>
-    <img src="images/favicon.svg" width="48" height="48" alt="" class="sheet-icon">
+    <img src="images/app-icon.png" width="48" height="48" alt="" class="sheet-icon">
     <h2 id="lost-key-h">Lost your license key?</h2>
     <p class="sheet-body">Enter the email address you purchased with, and we will resend your key.</p>
     <label class="sr-only" for="lost-key-email">Email address</label>
