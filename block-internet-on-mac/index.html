@@ -106,6 +106,14 @@
             "@type": "Answer",
             "text": "Yes, with Vow. The loopback interface stays up, so localhost, local dev servers, local containers via localhost ports, and local AI models such as Ollama keep working."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I bypass the block with a VPN?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. When Vow takes your Mac offline, it covers all network routing including VPN tunnels. Connecting to a VPN (WireGuard, OpenVPN, or commercial VPN apps) cannot route traffic out while a session is running. When the timer ends, your VPN configuration remains completely intact."
+          }
         }
       ]
     }
@@ -161,7 +169,7 @@
   <p>Block YouTube, and you open Netflix. Block WhatsApp, and you move to Telegram. Close Safari, and you open Chrome. Lists of blocked sites invite you to find the gap, and a block you can undo in one click is only as strong as your willpower in that moment.</p>
   <p>A block that actually holds needs three things:</p>
   <ol>
-    <li><strong>It covers every connection:</strong> Wi-Fi, Ethernet, USB adapters and hotspots, for every app and browser.</li>
+    <li><strong>It covers every connection:</strong> Wi-Fi, Ethernet, VPN connections, USB adapters and hotspots, for every app and browser.</li>
     <li><strong>It can't be cancelled on impulse,</strong> but it still has a way out for a real emergency.</li>
     <li><strong>It survives you quitting the app or restarting your Mac.</strong></li>
   </ol>
@@ -240,6 +248,10 @@
     <details>
       <summary>Will localhost and local AI models still work while I'm offline?</summary>
       <p>Yes, with Vow. The loopback interface stays up, so localhost, local dev servers, local containers via localhost ports, and local AI models such as Ollama keep working.</p>
+    </details>
+    <details>
+      <summary>Can I bypass the block with a VPN?</summary>
+      <p>No. When Vow takes your Mac offline, it covers all network routing including VPN tunnels. Connecting to a VPN (WireGuard, OpenVPN, or commercial VPN apps) cannot route traffic out while a session is running. When the timer ends, your VPN configuration remains completely intact.</p>
     </details>
   </div>
   <div class="article-cta">
