@@ -1,0 +1,40 @@
+# Vow
+
+> Vow is a Mac app by byArnav that turns off all of a Mac's network connections (Wi-Fi, Ethernet, USB adapters and iPhone hotspots) for a chosen time, from 5 minutes to 24 hours, and keeps them off until the timer ends, even if you quit the app or restart the Mac. It's a one-time purchase (currently $9.99 USD, an introductory price, shown in local currency at checkout), with 3 free sessions to try it. It runs on macOS 26 or later on Apple Silicon.
+
+Vow is not a website blocklist. It takes the whole Mac offline, so every browser, app and terminal tool loses its connection at once.
+
+## Key facts
+
+- What it turns off: every network connection on the Mac (Wi-Fi, Ethernet, USB network adapters, iPhone hotspots), for all apps and browsers. Bluetooth is not affected.
+- Session length: 5 minutes to 24 hours. Presets for 15 min, 30 min, 1 hr and 2 hr, or a custom duration. Recurring schedules are built in (for example, weekdays at 9:00 for 2 hours).
+- What keeps working offline: local files and apps, localhost and the loopback interface (local dev servers, local containers via localhost ports), local AI models such as Ollama, and Bluetooth devices (AirPods, mice, keyboards, Apple Watch). Messaging apps stay open, so old messages can still be read.
+- No instant cancel: you can request an early unlock, and the Mac then stays offline for 15 more minutes before the internet returns. The request can be cancelled during those 15 minutes.
+- Persistence: closing the window, quitting Vow or restarting the Mac does not end a session. A background helper (about 12 MB of memory, around 0.1% CPU) keeps the timer running.
+- Fail-open safety: if Vow's saved session data is ever damaged, it restores the internet instead of leaving the Mac stuck offline.
+- Network settings: Vow never changes proxies, /etc/hosts or DNS settings. When a session ends, the network returns exactly as it was.
+- Privacy: no account, no analytics, no tracking. Vow goes online for only two things, checking for updates and verifying the license key, and never during a session.
+- Price and license: one-time purchase, no subscription. Up to 2 personal Macs per license. All future 1.x updates included. 14-day money-back guarantee. Checkout by Paddle (merchant of record), with local currencies and UPI in India.
+- Requirements: macOS 26 or later, Apple Silicon (M1 or newer). It doesn't run on Intel Macs.
+- Trust: signed with an Apple Developer ID and notarized by Apple. Distributed directly, not on the Mac App Store, because the App Store sandbox doesn't allow the system-level network control Vow needs.
+- Current version: 1.0.14 (November 2026).
+
+## Pages
+
+- [Home](https://vow.byarnav.com/): overview, comparison with Freedom and Cold Turkey, pricing, FAQ
+- [How to block the internet on a Mac](https://vow.byarnav.com/block-internet-on-mac/): built-in macOS options and how Vow works, step by step
+- [Vow vs Freedom](https://vow.byarnav.com/freedom-alternative/): honest comparison, including when Freedom is the better choice
+- [Vow vs Cold Turkey](https://vow.byarnav.com/cold-turkey-alternative/): honest comparison, including when Cold Turkey is the better choice
+- [Vow vs SelfControl](https://vow.byarnav.com/selfcontrol-alternative/): comparison with the free, open-source SelfControl
+- [Changelog](https://vow.byarnav.com/changelog/): release notes, newest first
+- [Privacy policy](https://vow.byarnav.com/privacy.html)
+- [Terms of service](https://vow.byarnav.com/terms.html)
+
+## Download
+
+- [Vow.dmg](https://raw.githubusercontent.com/byarnav/offline-lock-releases/main/Vow.dmg): free download, 3 full sessions free before purchase
+
+## Contact
+
+- Email: support@byarnav.com
+- Publisher: byArnav (https://byarnav.com)
