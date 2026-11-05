@@ -6,12 +6,177 @@
 <title>Vow — Turn off the internet on your Mac</title>
 <meta name="description" content="Vow turns off your Mac's internet and keeps it off until your timer ends. No extensions, no account, no subscription. $9.99 once.">
 <meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://vow.byarnav.com/">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vow">
+<meta property="og:url" content="https://vow.byarnav.com/">
+<meta property="og:title" content="Vow — Turn off the internet on your Mac">
+<meta property="og:description" content="Vow turns off your Mac's internet and keeps it off until your timer ends. No extensions, no account, no subscription. $9.99 once.">
+<meta property="og:image" content="https://vow.byarnav.com/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vow's main window on a Mac: choose how long to go offline, then press Go Offline.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="images/favicon-16.png" sizes="16x16" type="image/png">
 <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="stylesheet" href="style.css?v=6">
-<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<script src="https://cdn.paddle.com/paddle/v2/paddle.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://vow.byarnav.com/#org",
+      "name": "byArnav",
+      "url": "https://byarnav.com",
+      "email": "support@byarnav.com",
+      "logo": "https://vow.byarnav.com/images/app-icon.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Arnav"
+      },
+      "sameAs": [
+        "https://github.com/byarnav"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://vow.byarnav.com/#website",
+      "url": "https://vow.byarnav.com/",
+      "name": "Vow",
+      "publisher": {
+        "@id": "https://vow.byarnav.com/#org"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://vow.byarnav.com/#app",
+      "name": "Vow",
+      "alternateName": "Vow for Mac",
+      "description": "Vow is a Mac app that turns off your Mac's network connections and keeps them off until your timer ends, from 5 minutes to 24 hours. Quitting Vow or restarting your Mac won't bring the internet back.",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "Focus / Internet blocker",
+      "operatingSystem": "macOS 26 or later (Apple Silicon)",
+      "softwareVersion": "1.0.14",
+      "downloadUrl": "https://raw.githubusercontent.com/byarnav/offline-lock-releases/main/Vow.dmg",
+      "image": "https://vow.byarnav.com/images/og-image.jpg",
+      "screenshot": "https://vow.byarnav.com/images/shots/vow-mac-choose-offline-duration.jpg",
+      "url": "https://vow.byarnav.com/",
+      "publisher": {
+        "@id": "https://vow.byarnav.com/#org"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "9.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://vow.byarnav.com/#pricing",
+        "description": "One-time purchase. Up to 2 personal Macs. Includes all future 1.x updates. 3 free sessions to try."
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://vow.byarnav.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is my Mac safe with Vow?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Vow is signed with an Apple Developer ID and notarized by Apple, which means Apple has scanned it for malware. It has one job: turning your network connections off and back on. It doesn't access your documents, photos, passwords, browser data, or other personal files."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much information does Vow collect?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "None for analytics or tracking. Vow doesn't require an account or your email address. It only connects to the internet to check for updates and validate your license key with our secure license server (license.byarnav.com). These checks never happen while a session is running. For more details, you can read our Privacy Policy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I uninstall Vow whenever I want?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! You can uninstall Vow whenever you're not in an active session. Uninstalling removes both the app and its helper. You'll find step-by-step instructions in Vow's Help menu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if something goes wrong and I'm stuck offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vow is designed to restore your internet connection when something goes wrong with its saved timer. If the timer data is damaged or invalid, Vow restores your network connection rather than leaving you offline indefinitely. If a valid timer is still running, your Mac stays offline until the session ends. You can also find recovery and uninstall instructions in Vow's Help menu. Still need help? Email us at support@byarnav.com."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why isn't Vow available on the Mac App Store?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Apple's App Store sandbox restrictions don't allow the kind of system-level control Vow needs to perform its core function. That's why Vow is distributed directly rather than through the Mac App Store. However, Vow is signed with an Apple Developer ID and notarized by Apple, so macOS can verify its developer signature and notarization status."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I really need the internet during a session?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Life happens. If you absolutely need to get online, you can request an early unlock. Your Mac will stay offline for another 15 minutes before your internet connection is restored. This gives you time to reconsider and stay focused. You can change your mind during those 15 minutes and continue your session. If 15 minutes or less are already left, you can simply wait for the timer to finish."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I bypass Vow by quitting the app, restarting my Mac, or deleting it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Your session timer continues running even if you quit Vow or restart your Mac. However, don't delete Vow during an active session. Since your network connection is already disabled at the system level, deleting the app won't restore your internet. It could also remove the helper responsible for restoring your network when the timer ends. Let your session finish before uninstalling Vow."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which connections does Vow block? Does Bluetooth still work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vow disables your Mac's internet and network connections, including Wi-Fi, Ethernet, VPN connections, and personal hotspots. It also prevents new network connections from getting you online during an active session. Bluetooth continues working normally. Your AirPods, wireless mouse, keyboard, and Apple Watch will keep working as usual."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if my Mac is asleep when a scheduled session starts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vow handles scheduled sessions even when your Mac is asleep. If your Mac wakes up within one minute of the scheduled start time, the full session will run. If it wakes up later, Vow starts the session for the remaining time, provided at least 15 minutes are left in the scheduled window."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your refund policy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer a 14-day money-back guarantee. If Vow does not fit your workflow or you are not completely satisfied, simply email support@byarnav.com within 14 days of purchase for a prompt, full refund."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I have a question that's not here. How can I contact you?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We're happy to help! For questions, technical issues, or anything else related to Vow, email us at support@byarnav.com. We'll be glad to hear from you."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 <style>
 :root {
   --bg: #ffffff;
@@ -448,13 +613,13 @@ details p + p { margin-top: -8px; }
 
     <div class="rail-wrap">
       <div class="rail" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Screenshots of Vow">
-        <figure class="rail-slide"><img src="images/shots/1.jpg" width="1920" height="1080" alt="Vow's main window: pick a duration from 15 minutes to 24 hours, then press Go Offline." loading="eager" decoding="async"></figure>
-        <figure class="rail-slide"><img src="images/shots/2.jpg" width="1920" height="1080" alt="How Vow works: choose a duration, no instant cancel, early unlock, automatic return." loading="eager" decoding="async"></figure>
-        <figure class="rail-slide"><img src="images/shots/3.jpg" width="1920" height="1080" alt="The Schedules sheet, empty, with an Add Schedule button." loading="eager" decoding="async"></figure>
-        <figure class="rail-slide"><img src="images/shots/4.jpg" width="1920" height="1080" alt="The Go offline? confirmation, explaining the 15-minute cooldown." loading="eager" decoding="async"></figure>
-        <figure class="rail-slide"><img src="images/shots/5.jpg" width="1920" height="1080" alt="An active session: 4:50 left and Back online at 15:37." loading="eager" decoding="async"></figure>
-        <figure class="rail-slide"><img src="images/shots/6.jpg" width="1920" height="1080" alt="Schedules with one entry: 09:00 on weekdays for 1 hour, with a switch, edit and delete." loading="eager" decoding="async"></figure>
-        <figure class="rail-slide"><img src="images/shots/7.jpg" width="1920" height="1080" alt="The New Schedule form: repeat on Monday to Friday, start 18:00, duration 1 hour." loading="eager" decoding="async"></figure>
+        <figure class="rail-slide"><img src="images/shots/vow-mac-choose-offline-duration.jpg" width="1920" height="1080" alt="Vow's main window: pick a duration from 5 minutes to 24 hours, then press Go Offline." loading="eager" fetchpriority="high" decoding="async"></figure>
+        <figure class="rail-slide"><img src="images/shots/vow-how-it-works.jpg" width="1920" height="1080" alt="How Vow works: choose a duration, no instant cancel, early unlock, automatic return." loading="lazy" decoding="async"></figure>
+        <figure class="rail-slide"><img src="images/shots/vow-schedules-empty.jpg" width="1920" height="1080" alt="The Schedules sheet, empty, with an Add Schedule button." loading="lazy" decoding="async"></figure>
+        <figure class="rail-slide"><img src="images/shots/vow-go-offline-confirmation.jpg" width="1920" height="1080" alt="The Go offline? confirmation, explaining the 15-minute cooldown." loading="lazy" decoding="async"></figure>
+        <figure class="rail-slide"><img src="images/shots/vow-active-offline-session.jpg" width="1920" height="1080" alt="An active session: 4:50 left and Back online at 15:37." loading="lazy" decoding="async"></figure>
+        <figure class="rail-slide"><img src="images/shots/vow-weekday-schedule.jpg" width="1920" height="1080" alt="Schedules with one entry: 09:00 on weekdays for 1 hour, with a switch, edit and delete." loading="lazy" decoding="async"></figure>
+        <figure class="rail-slide"><img src="images/shots/vow-new-schedule-form.jpg" width="1920" height="1080" alt="The New Schedule form: repeat on Monday to Friday, start 18:00, duration 1 hour." loading="lazy" decoding="async"></figure>
       </div>
       <div class="rail-controls">
         <div class="rail-pill">

@@ -1,0 +1,22 @@
+# vow.byarnav.com: everyone, including AI search and answer engines, is welcome.
+User-agent: *
+Allow: /
+
+# Explicitly welcome AI crawlers (search, answer, and training).
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot
+User-agent: Applebot-Extended
+User-agent: Bingbot
+User-agent: CCBot
+User-agent: Meta-ExternalAgent
+Allow: /
+
+Sitemap: https://vow.byarnav.com/sitemap.xml
