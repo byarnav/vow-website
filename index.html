@@ -10,7 +10,7 @@
 <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=4">
 <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
 <style>
 :root {
@@ -426,7 +426,7 @@ details p + p { margin-top: -8px; }
       <a href="#faq">FAQ</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
-      <a href="https://byarnav.gumroad.com/l/vow" target="_blank" rel="noopener" class="nav-buy">Buy</a>
+      <a href="#pricing" class="nav-buy" data-paddle-checkout>Buy</a>
     </nav>
   </div>
 </header>
@@ -444,8 +444,8 @@ details p + p { margin-top: -8px; }
       <h1 id="statement-h">There's always another.<br><span class="grad-text">The internet is the distraction.</span></h1>
       <p class="lead">Vow turns off your Mac's network connections and keeps them off until your timer ends.</p>
 
-      <div class="actions hero-actions" id="pricing">
-        <a class="btn primary" href="https://byarnav.gumroad.com/l/vow" target="_blank" rel="noopener">Buy Vow &middot; <span data-price-text>$9.99</span></a>
+      <div class="actions hero-actions">
+        <a class="btn primary" href="#pricing" data-paddle-checkout>Buy Vow &middot; <span data-price-text>$9.99</span></a>
         <a class="btn secondary" href="https://raw.githubusercontent.com/byarnav/offline-lock-releases/main/Vow.dmg">Try it free</a>
       </div>
       <p class="fine">Download the app to try 3 full sessions free. Then <span data-price-text>$9.99</span> once &mdash; no subscription. macOS 26 or later, Apple Silicon.</p>
@@ -530,16 +530,37 @@ details p + p { margin-top: -8px; }
     </dl>
   </section>
 
-  <!-- Performance & Architecture (Apple "Power on full display" Style) -->
-  <section class="wrap-wide">
-    <div class="section-head">
-      <h2>Small and quiet.<br>Engineered the macOS way.</h2>
-    </div>
-    <div class="bento-dark">
+  <!-- Menu bar (Apple "Lives in your menu bar" Style) -->
+  <section class="wrap-wide" aria-labelledby="menubar-h">
+    <div class="section-head"><h2 id="menubar-h">Lives in your menu bar.<br>Stays out of your way.</h2></div>
+    <div class="bento-dark menubar">
+      <div class="menu-strip" role="img" aria-label="Vow's lock icon in the Mac menu bar">
+        <span class="menu-strip-icons" aria-hidden="true">
+          <span class="menu-glyph menu-glyph-line"></span>
+          <span class="menu-glyph menu-glyph-dot"></span>
+          <span class="menu-glyph menu-glyph-line menu-glyph-short"></span>
+          <span class="menu-glyph menu-glyph-square"></span>
+          <span class="menu-lock"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+        </span>
+      </div>
+      <div class="menubar-grid">
+        <div class="menubar-item">
+          <h3>Sits quietly up top.</h3>
+          <p>A hairline lock icon in your Mac's menu bar. One click to start or check a session.</p>
+        </div>
+        <div class="menubar-item">
+          <h3>Nothing in your Dock.</h3>
+          <p>No extra icon, no window to manage. Your workspace stays clean.</p>
+        </div>
+        <div class="menubar-item">
+          <h3>Light on resources.</h3>
+          <p>Opens in a fraction of a second and uses very little power.</p>
+        </div>
+      </div>
       <div class="facts">
         <div><strong class="metric">&lt;20 MB</strong><span>memory footprint</span></div>
         <div><strong class="metric">~0.1%</strong><span>CPU usage</span></div>
-        <div><strong class="metric">0</strong><span>browser extensions</span></div>
+        <div><strong class="metric">0</strong><span>Dock icons</span></div>
         <div><strong class="metric">0</strong><span>cloud accounts</span></div>
       </div>
     </div>
@@ -584,7 +605,7 @@ details p + p { margin-top: -8px; }
     <div class="bento-grid-3">
       <div class="bento-card">
         <h3>Privacy. Built in.</h3>
-        <p>No analytics. No tracking. No account. Vow goes online for two things only: checking for updates, and verifying your license key with Gumroad.</p>
+        <p>No analytics. No tracking. No account. Vow goes online for two things only: checking for updates, and verifying your license key with our secure license server.</p>
         <p class="card-link"><a href="privacy.html">Read the privacy policy &rsaquo;</a></p>
       </div>
       <div class="bento-card">
@@ -595,6 +616,45 @@ details p + p { margin-top: -8px; }
         <h3>Fail-open safety.</h3>
         <p>If Vow's saved session file is ever corrupted by a power loss or crash, it automatically restores your internet instead of leaving you stranded offline.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Closing block: Buy card + What's New -->
+  <section class="wrap-wide" id="pricing" aria-labelledby="buy-h">
+    <div class="closing-grid">
+      <article class="bento-card buy-card">
+        <img src="images/favicon.svg" width="88" height="88" alt="" class="buy-icon">
+        <h2 id="buy-h">Vow</h2>
+        <p class="buy-price"><span data-price-text>$9.99</span></p>
+        <ul class="buy-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span><strong>One-time purchase &middot; Owned forever</strong> <span class="buy-list-note">(No subscription)</span></span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span><strong>Valid on up to 2 personal Macs</strong></span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg><span><strong>Includes all future 1.x updates</strong></span></li>
+        </ul>
+        <div class="actions buy-actions">
+          <button type="button" class="btn primary" data-paddle-checkout>Buy Vow</button>
+          <a class="btn secondary" href="https://raw.githubusercontent.com/byarnav/offline-lock-releases/main/Vow.dmg">Try 3 Sessions Free</a>
+        </div>
+        <p class="buy-status fine" role="status" aria-live="polite"></p>
+        <p class="fine buy-disclaimer">Secure checkout by Paddle, our merchant of record. macOS 26 or later, Apple Silicon.</p>
+      </article>
+      <article class="bento-card news-card" aria-labelledby="news-h">
+        <h3 id="news-h">What's New</h3>
+        <ol class="news-list">
+          <li>
+            <div class="news-meta"><span class="news-pill">1.0.14</span><span class="news-dot" aria-hidden="true">&middot;</span><time datetime="2026-11">November 2026</time></div>
+            <p>Smoother license key entry during trial, refreshed interface polish.</p>
+          </li>
+          <li>
+            <div class="news-meta"><span class="news-pill">1.0.13</span><span class="news-dot" aria-hidden="true">&middot;</span><time datetime="2026-11">November 2026</time></div>
+            <p>Automatic checkout in your local currency (with UPI support in India), faster background updates.</p>
+          </li>
+          <li>
+            <div class="news-meta"><span class="news-pill">1.0.12</span><span class="news-dot" aria-hidden="true">&middot;</span><time datetime="2026-11">November 2026</time></div>
+            <p>Scheduled deep-work sessions and custom lock durations.</p>
+          </li>
+        </ol>
+      </article>
     </div>
   </section>
 
@@ -609,7 +669,7 @@ details p + p { margin-top: -8px; }
       <details>
         <summary>How much information does Vow collect?</summary>
         <p>None for analytics or tracking. Vow doesn't require an account or your email address.</p>
-        <p>It only connects to the internet to check for updates and validate your license key with Gumroad. These checks never happen while a session is running.</p>
+        <p>It only connects to the internet to check for updates and validate your license key with our secure license server (license.byarnav.com). These checks never happen while a session is running.</p>
         <p>For more details, you can read our <a href="privacy.html">Privacy Policy</a>.</p>
       </details>
       <details>
@@ -671,11 +731,26 @@ details p + p { margin-top: -8px; }
 <footer class="foot">
   <div class="foot-inner">
     <p>Signed with an Apple Developer ID and notarized by Apple. Requires macOS 26 or later on Apple Silicon.</p>
-    <p>This page has no analytics and sets no cookies. <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a> &middot; 14-day money-back guarantee.</p>
+    <p>No analytics. Checkout is handled by Paddle. <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a> &middot; <button type="button" class="link-btn" data-open-lost-key>Lost your key?</button> &middot; 14-day money-back guarantee.</p>
     <p>Copyright &copy; 2026 <a href="https://byarnav.com">byArnav</a>. All rights reserved.<span class="foot-mail"><span class="dot"> &middot; </span><a href="mailto:support@byarnav.com">support@byarnav.com</a></span></p>
   </div>
 </footer>
 
-<script src="script.js?v=3"></script>
+<dialog id="lost-key" class="sheet" aria-labelledby="lost-key-h">
+  <form class="sheet-form" novalidate>
+    <img src="images/favicon.svg" width="48" height="48" alt="" class="sheet-icon">
+    <h2 id="lost-key-h">Lost your license key?</h2>
+    <p class="sheet-body">Enter the email address you purchased with, and we will resend your key.</p>
+    <label class="sr-only" for="lost-key-email">Email address</label>
+    <input id="lost-key-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+    <p class="sheet-status" role="status" aria-live="polite"></p>
+    <div class="sheet-actions">
+      <button type="button" class="btn secondary" data-close-lost-key>Cancel</button>
+      <button type="submit" class="btn sheet-submit">Send my key</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="script.js?v=4"></script>
 </body>
 </html>
