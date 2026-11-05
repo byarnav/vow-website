@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Block the Internet on a Mac for a Set Time</title>
+<meta name="description" content="Every way to turn off the internet on a Mac: Wi-Fi, Terminal, Screen Time, routers and apps, plus how to make a block hold until the timer ends.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://vow.byarnav.com/block-internet-on-mac/">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Vow">
+<meta property="og:url" content="https://vow.byarnav.com/block-internet-on-mac/">
+<meta property="og:title" content="How to Block the Internet on a Mac for a Set Time">
+<meta property="og:description" content="Every way to turn off the internet on a Mac: Wi-Fi, Terminal, Screen Time, routers and apps, plus how to make a block hold until the timer ends.">
+<meta property="og:image" content="https://vow.byarnav.com/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vow's main window on a Mac: choose how long to go offline, then press Go Offline.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/images/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="stylesheet" href="/style.css?v=8">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Vow",
+          "item": "https://vow.byarnav.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Block the internet on a Mac",
+          "item": "https://vow.byarnav.com/block-internet-on-mac/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://vow.byarnav.com/block-internet-on-mac/#article",
+      "headline": "How to block the internet on your Mac for a set time",
+      "description": "Every way to turn off the internet on a Mac: Wi-Fi, Terminal, Screen Time, routers and apps, plus how to make a block hold until the timer ends.",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://vow.byarnav.com/#org",
+        "name": "byArnav",
+        "url": "https://byarnav.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://vow.byarnav.com/#org",
+        "name": "byArnav",
+        "url": "https://byarnav.com"
+      },
+      "image": "https://vow.byarnav.com/images/og-image.jpg",
+      "mainEntityOfPage": "https://vow.byarnav.com/block-internet-on-mac/",
+      "about": {
+        "@id": "https://vow.byarnav.com/#app"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://vow.byarnav.com/block-internet-on-mac/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I turn off the internet on my Mac without turning off Bluetooth?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Wi-Fi and Bluetooth are separate, so turning off Wi-Fi leaves Bluetooth on. Vow also leaves Bluetooth alone, so your AirPods, mouse, keyboard and Apple Watch keep working during a session."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does turning off Wi-Fi also block Ethernet or an iPhone hotspot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Turning off Wi-Fi only stops Wi-Fi. A plugged-in Ethernet cable, a USB network adapter or an iPhone connected by USB can still get you online. Vow turns off all of them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I schedule my Mac's internet to turn off at night?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "macOS has no built-in way to turn off the network at a set time. Screen Time's Downtime limits apps, but it doesn't take your Mac offline. With Vow, you can add a schedule, such as every weekday at 21:00 for 2 hours, and the session starts on its own."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will localhost and local AI models still work while I'm offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, with Vow. The loopback interface stays up, so localhost, local dev servers, local containers via localhost ports, and local AI models such as Ollama keep working."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap-wide bar-inner">
+    <a href="/" class="mark">Vow</a>
+    <nav aria-label="Primary">
+      <a href="/#compare">Compare</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#pricing" class="nav-buy">Buy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<article class="article">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Vow</a> <span aria-hidden="true">&rsaquo;</span> <span aria-current="page">Block the internet on a Mac</span></nav>
+  <h1>How to block the internet on your Mac for a set time</h1>
+  <p class="updated">Last updated: <time datetime="2026-11-05">November 5, 2026</time></p>
+  <p class="summary">The quickest way is to turn off Wi-Fi, but it takes one click to undo. For a block that holds, you need something that turns off every connection and keeps it off until a timer ends, even if you quit apps or restart. This guide covers the built-in macOS options first, then how Vow does it.</p>
+
+  <h2>The quick answer</h2>
+  <ul>
+    <li><strong>For a quick break:</strong> turn off Wi-Fi in Control Center. It's instant, and it's one click to undo.</li>
+    <li><strong>For a block that holds:</strong> use an app that takes your whole Mac offline on a timer and doesn't let you cancel on impulse. Vow does this for anywhere from 5 minutes to 24 hours, and quitting the app or restarting your Mac won't bring the internet back.</li>
+  </ul>
+
+  <h2>Built-in ways to turn off the internet on a Mac</h2>
+  <p>macOS has no "go offline until 5 pm" switch, but you can get part of the way with what's already on your Mac.</p>
+
+  <h3>1. Turn off Wi-Fi</h3>
+  <p>Click the Wi-Fi icon in the menu bar or Control Center and switch it off, or go to System Settings &rsaquo; Wi-Fi. It's free and instant. The catch: it's one click to turn back on, there's no timer, and it only stops Wi-Fi. An Ethernet cable, a USB network adapter or an iPhone connected by USB can still get you online.</p>
+
+  <h3>2. Use Terminal</h3>
+  <p>If you're comfortable with the command line, <code>networksetup -setairportpower en0 off</code> turns Wi-Fi off, and the same command with <code>on</code> turns it back on. Wi-Fi is usually <code>en0</code> on a Mac laptop; run <code>networksetup -listallhardwareports</code> to check yours. It has the same weakness as the Wi-Fi switch: one command undoes it, and nothing turns it back on for you.</p>
+
+  <h3>3. Screen Time</h3>
+  <p>Screen Time (System Settings &rsaquo; Screen Time) can limit apps with Downtime and App Limits, and its Content &amp; Privacy settings can restrict websites. It was designed for parents managing a child's Mac. When you set the passcode yourself, you can switch it off in seconds, and it limits apps and sites by list rather than turning off the network.</p>
+
+  <h3>4. Focus modes</h3>
+  <p>Focus modes silence notifications, but your internet stays on. They're a good companion to a block, not a block.</p>
+
+  <h3>5. Your router</h3>
+  <p>Many routers can pause the internet on a schedule. That's hard to undo from your Mac, but it affects everyone at home, and an iPhone hotspot gets around it immediately.</p>
+
+  <h2>Why most blocks don't hold</h2>
+  <p>Block YouTube, and you open Netflix. Block WhatsApp, and you move to Telegram. Close Safari, and you open Chrome. Lists of blocked sites invite you to find the gap, and a block you can undo in one click is only as strong as your willpower in that moment.</p>
+  <p>A block that actually holds needs three things:</p>
+  <ol>
+    <li><strong>It covers every connection:</strong> Wi-Fi, Ethernet, USB adapters and hotspots, for every app and browser.</li>
+    <li><strong>It can't be cancelled on impulse,</strong> but it still has a way out for a real emergency.</li>
+    <li><strong>It survives you quitting the app or restarting your Mac.</strong></li>
+  </ol>
+
+  <h2>How to block the internet on a Mac with Vow</h2>
+  <p>Vow is a Mac app built around those three rules. Here's a session from start to finish.</p>
+
+  <h3>Step 1: Choose how long</h3>
+  <p>Pick a duration from 5 minutes to 24 hours. There are presets for 15 minutes, 30 minutes, 1 hour and 2 hours, or choose Custom. Vow shows exactly when you'll be back online.</p>
+  <figure>
+    <img src="/images/vow-duration-picker.jpg" width="1600" height="900" alt="Vow's main window: Go offline for 1 hr, back online at 16:29, with 15 min, 30 min, 1 hr, 2 hr and Custom presets." loading="lazy" decoding="async">
+  </figure>
+
+  <h3>Step 2: Confirm, and go offline</h3>
+  <p>Press Go Offline. Vow explains the one rule before it starts: there's no instant cancel. Then it turns off every network connection on your Mac.</p>
+
+  <h3>Step 3: Stay offline</h3>
+  <p>A countdown shows the time left. Closing the window doesn't end the session, and neither does quitting Vow or restarting your Mac. A small background helper keeps the timer running silently.</p>
+  <figure>
+    <img src="/images/vow-offline-countdown.jpg" width="1600" height="900" alt="An active Vow session: Offline, 4:50 left, back online at 15:37. Closing this window does not end the session." loading="lazy" decoding="async">
+  </figure>
+
+  <h3>Step 4: Back online, automatically</h3>
+  <p>When the timer ends, your internet comes back on its own, exactly as it was before.</p>
+
+  <h3>If you really need to get online early</h3>
+  <p>Life happens. You can request an early unlock, and your Mac stays offline for 15 more minutes first. You can cancel the request during those 15 minutes, which is usually all it takes for the urge to pass.</p>
+  <figure>
+    <img src="/images/vow-how-it-works-steps.jpg" width="1600" height="900" alt="How Vow works: choose a duration from 5 minutes to 24 hours, no instant cancel, early unlock after 15 more minutes, automatic return." loading="lazy" decoding="async">
+  </figure>
+
+  <h3>Schedule it</h3>
+  <p>To go offline at the same time every day, add a schedule, such as Monday to Friday at 18:00 for 1 hour. If your Mac is asleep when a schedule starts and wakes within a minute, the full session runs. If it wakes later, Vow runs the remaining time, as long as at least 15 minutes are left.</p>
+  <figure>
+    <img src="/images/vow-new-weekday-schedule.jpg" width="1600" height="900" alt="Vow's New Schedule form: repeat Monday to Friday, start 18:00, duration 1 hour, back online at 19:00." loading="lazy" decoding="async">
+  </figure>
+
+  <h2>What still works while you're offline</h2>
+  <ul>
+    <li><strong>Your files and apps.</strong> Write, design, read, code.</li>
+    <li><strong>Messaging apps stay open,</strong> so you can read old messages. Nothing new comes in.</li>
+    <li><strong>Local AI models</strong> and tools like Ollama.</li>
+    <li><strong>localhost and local dev servers.</strong> The loopback interface stays up, and local containers work through localhost ports.</li>
+    <li><strong>Bluetooth.</strong> AirPods, wireless mice and keyboards, and Apple Watch keep working.</li>
+  </ul>
+
+  <h2>Which option should you use?</h2>
+  <div class="table-scroll">
+    <table>
+      <caption>Ways to turn off the internet on a Mac, compared</caption>
+      <thead><tr><th scope="col">Method</th><th scope="col">Covers every connection</th><th scope="col">Timer</th><th scope="col">How easy to undo</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Wi-Fi switch</th><td>No, Wi-Fi only</td><td>No</td><td>One click</td></tr>
+        <tr><th scope="row">Terminal</th><td>No, one interface per command</td><td>No</td><td>One command</td></tr>
+        <tr><th scope="row">Screen Time</th><td>No, limits apps and sites by list</td><td>Downtime schedules</td><td>Your own passcode</td></tr>
+        <tr><th scope="row">Router schedule</th><td>Everyone on your home network</td><td>Depends on the router</td><td>An iPhone hotspot gets around it</td></tr>
+        <tr><th scope="row">Vow</th><td><strong>Yes</strong>: Wi-Fi, Ethernet, USB adapters, hotspots</td><td><strong>5 minutes to 24 hours</strong>, plus schedules</td><td><strong>No instant cancel</strong>; early unlock after 15 minutes</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>For a short break, the Wi-Fi switch is fine. For focused work, an evening off, or getting through a bad habit, you want something that holds when your willpower doesn't.</p>
+  <h2 id="faq">Questions</h2>
+  <div class="faq">
+    <details>
+      <summary>Can I turn off the internet on my Mac without turning off Bluetooth?</summary>
+      <p>Yes. Wi-Fi and Bluetooth are separate, so turning off Wi-Fi leaves Bluetooth on. Vow also leaves Bluetooth alone, so your AirPods, mouse, keyboard and Apple Watch keep working during a session.</p>
+    </details>
+    <details>
+      <summary>Does turning off Wi-Fi also block Ethernet or an iPhone hotspot?</summary>
+      <p>No. Turning off Wi-Fi only stops Wi-Fi. A plugged-in Ethernet cable, a USB network adapter or an iPhone connected by USB can still get you online. Vow turns off all of them.</p>
+    </details>
+    <details>
+      <summary>Can I schedule my Mac's internet to turn off at night?</summary>
+      <p>macOS has no built-in way to turn off the network at a set time. Screen Time's Downtime limits apps, but it doesn't take your Mac offline. With Vow, you can add a schedule, such as every weekday at 21:00 for 2 hours, and the session starts on its own.</p>
+    </details>
+    <details>
+      <summary>Will localhost and local AI models still work while I'm offline?</summary>
+      <p>Yes, with Vow. The loopback interface stays up, so localhost, local dev servers, local containers via localhost ports, and local AI models such as Ollama keep working.</p>
+    </details>
+  </div>
+  <div class="article-cta">
+    <h2>Try Vow free</h2>
+    <p>Vow is a Mac app that turns off your internet and keeps it off until your timer ends, from 5 minutes to 24 hours. Try 3 full sessions free, then pay $9.99 once. Requires macOS 26 or later on Apple Silicon.</p>
+    <div class="actions">
+      <a class="btn primary" href="/#pricing">Buy Vow &middot; $9.99</a>
+      <a class="btn secondary" href="https://raw.githubusercontent.com/byarnav/offline-lock-releases/main/Vow.dmg">Try 3 sessions free</a>
+    </div>
+  </div>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <p>Guides: <a href="/block-internet-on-mac/">Block the internet on a Mac</a> &middot; <a href="/freedom-alternative/">Freedom alternative</a> &middot; <a href="/cold-turkey-alternative/">Cold Turkey alternative</a> &middot; <a href="/selfcontrol-alternative/">SelfControl alternative</a> &middot; <a href="/changelog/">Changelog</a></p>
+    <p>Signed with an Apple Developer ID and notarized by Apple. Requires macOS 26 or later on Apple Silicon.</p>
+    <p>No analytics. Checkout is handled by Paddle. <a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms</a> &middot; 14-day money-back guarantee.</p>
+    <p>Copyright &copy; 2026 <a href="https://byarnav.com">byArnav</a>. All rights reserved.<span class="foot-mail"><span class="dot"> &middot; </span><a href="mailto:support@byarnav.com">support@byarnav.com</a></span></p>
+  </div>
+</footer>
+</body>
+</html>
