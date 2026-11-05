@@ -773,3 +773,13 @@ details p + p { margin-top: -8px; }
 @media (prefers-reduced-motion: reduce) {
   .sheet[open] { animation: none; }
 }
+
+/* Comparison table caption */
+.bento-table caption {
+  caption-side: top;
+  text-align: left;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+  padding: 0 0 12px;
+}

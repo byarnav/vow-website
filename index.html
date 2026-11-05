@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vow — Turn off the internet on your Mac</title>
-<meta name="description" content="Vow turns off your Mac's internet and keeps it off until your timer ends. No extensions, no account, no subscription. $9.99 once.">
+<title>Vow — Block the Internet on Your Mac for a Set Time</title>
+<meta name="description" content="Vow turns off every network connection on your Mac and keeps it off until your timer ends. No extensions, no account. $9.99 once, 3 sessions free.">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://vow.byarnav.com/">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
@@ -12,8 +12,8 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Vow">
 <meta property="og:url" content="https://vow.byarnav.com/">
-<meta property="og:title" content="Vow — Turn off the internet on your Mac">
-<meta property="og:description" content="Vow turns off your Mac's internet and keeps it off until your timer ends. No extensions, no account, no subscription. $9.99 once.">
+<meta property="og:title" content="Vow — Block the Internet on Your Mac for a Set Time">
+<meta property="og:description" content="Vow turns off every network connection on your Mac and keeps it off until your timer ends. No extensions, no account. $9.99 once, 3 sessions free.">
 <meta property="og:image" content="https://vow.byarnav.com/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -23,7 +23,7 @@
 <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 <script src="https://cdn.paddle.com/paddle/v2/paddle.js" defer></script>
 <script type="application/ld+json">
 {
@@ -84,6 +84,14 @@
       "@type": "FAQPage",
       "@id": "https://vow.byarnav.com/#faq",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I block the internet on my Mac for a set time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Open Vow, choose how long to stay offline (anywhere from 5 minutes to 24 hours), and press Go Offline. Vow turns off every network connection on your Mac and keeps it off until the timer ends, even if you quit the app or restart your Mac. You can also add schedules, such as weekdays at 9:00, so sessions start on their own."
+          }
+        },
         {
           "@type": "Question",
           "name": "Is my Mac safe with Vow?",
@@ -150,10 +158,58 @@
         },
         {
           "@type": "Question",
+          "name": "Does Vow block apps like Discord, Slack, and Mail, or only browsers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Everything. Vow takes your whole Mac offline, so every browser, app and terminal tool loses its connection at once, including Discord, Slack, Telegram, WhatsApp and Mail. Your apps stay open, so you can still read old messages offline. Nothing new comes in until your session ends."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will Vow break my VPN or network settings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Vow never touches proxies, /etc/hosts or DNS settings, and when a session ends it restores your network exactly as it was before. While a session is running, VPN connections are off along with everything else."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "What happens if my Mac is asleep when a scheduled session starts?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Vow handles scheduled sessions even when your Mac is asleep. If your Mac wakes up within one minute of the scheduled start time, the full session will run. If it wakes up later, Vow starts the session for the remaining time, provided at least 15 minutes are left in the scheduled window."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Vow work on Intel Macs or older versions of macOS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Vow requires macOS 26 or later on a Mac with Apple Silicon (M1 or newer). It doesn't run on Intel Macs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Vow different from Freedom, Cold Turkey, or SelfControl?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Freedom, Cold Turkey and SelfControl block lists of websites (and, in some cases, apps) that you set up and maintain. Vow doesn't use lists: it turns off your Mac's whole internet connection for the time you choose, so there's nothing to keep up to date or work around. Pick a list-based blocker if you want to block some sites and keep the rest. Pick Vow if you want quiet. See the comparison table for Freedom and Cold Turkey."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I pay in my local currency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Checkout is handled by Paddle, which shows the price in your local currency and supports local payment methods, including UPI in India. The base price is $9.99 USD."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a subscription?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Vow is a one-time purchase: pay once and keep it, with all future 1.x updates included. One license covers up to 2 personal Macs, and you can try 3 full sessions free before you buy."
           }
         },
         {
@@ -596,13 +652,14 @@ details p + p { margin-top: -8px; }
   <!-- Opening Statement + Hero (Apple Product Launch Lockup) -->
   <section class="hero wrap-wide" id="how" aria-labelledby="statement-h">
     <div class="hero-copy">
+      <p class="eyebrow">Internet blocker for Mac</p>
       <p class="echo in" aria-hidden="true">
         <span>Another app.</span>
         <span>Another website.</span>
         <span>Another distraction.</span>
       </p>
       <h1 id="statement-h">There's always another.<br><span class="grad-text">The internet is the distraction.</span></h1>
-      <p class="lead">Vow turns off your Mac's network connections and keeps them off until your timer ends.</p>
+      <p class="lead">Vow is a Mac app that turns off your internet (Wi-Fi, Ethernet and hotspots, for every app and browser) and keeps it off until your timer ends, from 5 minutes to 24 hours.</p>
 
       <div class="actions hero-actions">
         <a class="btn primary" href="#pricing" data-paddle-checkout>Buy Vow &middot; <span data-price-text>$9.99</span></a>
@@ -639,7 +696,7 @@ details p + p { margin-top: -8px; }
     <div class="bento-prose">
       <p>Block YouTube, and you open Netflix. Block WhatsApp, and you move to Telegram. Close Safari, and you open Chrome.</p>
       <p>Vow does not maintain a list. It takes your Mac offline entirely. No browser extensions, no accounts, and no blocklists to outsmart.</p>
-      <p class="highlight-line">Set a duration from five minutes to twenty-four hours. You make a vow. The machine keeps it.</p>
+      <p class="highlight-line">Set a duration from 5 minutes to 24 hours. You make a vow. The machine keeps it.</p>
     </div>
   </section>
 
@@ -709,18 +766,18 @@ details p + p { margin-top: -8px; }
           <p>A hairline lock icon in your Mac's menu bar. One click to start or check a session.</p>
         </div>
         <div class="menubar-item">
-          <h3>Nothing in your Dock.</h3>
-          <p>No extra icon, no window to manage. Your workspace stays clean.</p>
+          <h3>Close the window. Your vow holds.</h3>
+          <p>Closing Vow's window doesn't end a session. A small background helper keeps the timer running silently until your internet comes back.</p>
         </div>
         <div class="menubar-item">
           <h3>Light on resources.</h3>
-          <p>Opens in a fraction of a second and uses very little power.</p>
+          <p>The background helper uses about 12 MB of memory and around 0.1% CPU while it keeps your session.</p>
         </div>
       </div>
       <div class="facts">
-        <div><strong class="metric">&lt;20 MB</strong><span>memory footprint</span></div>
-        <div><strong class="metric">~0.1%</strong><span>CPU usage</span></div>
-        <div><strong class="metric">0</strong><span>Dock icons</span></div>
+        <div><strong class="metric">~12 MB</strong><span>helper memory</span></div>
+        <div><strong class="metric">~0.1%</strong><span>helper CPU</span></div>
+        <div><strong class="metric">0</strong><span>browser extensions</span></div>
         <div><strong class="metric">0</strong><span>cloud accounts</span></div>
       </div>
     </div>
@@ -734,6 +791,7 @@ details p + p { margin-top: -8px; }
     <div class="bento-table">
       <div class="table-scroll">
         <table>
+          <caption>Vow vs Freedom vs Cold Turkey for Mac (compared November 2026)</caption>
           <thead>
             <tr><th scope="col"></th><th scope="col" class="us">Vow</th><th scope="col">Freedom</th><th scope="col">Cold Turkey</th></tr>
           </thead>
@@ -820,8 +878,13 @@ details p + p { margin-top: -8px; }
 
   <!-- FAQ -->
   <section class="wrap" id="faq">
-    <h2>Questions.</h2>
+    <h2>Questions about Vow.</h2>
     <div class="faq">
+      <details>
+        <summary>How do I block the internet on my Mac for a set time?</summary>
+        <p>Open Vow, choose how long to stay offline (anywhere from 5 minutes to 24 hours), and press Go Offline.</p>
+        <p>Vow turns off every network connection on your Mac and keeps it off until the timer ends, even if you quit the app or restart your Mac. You can also add schedules, such as weekdays at 9:00, so sessions start on their own.</p>
+      </details>
       <details>
         <summary>Is my Mac safe with Vow?</summary>
         <p>Yes. Vow is signed with an Apple Developer ID and notarized by Apple, which means Apple has scanned it for malware. It has one job: turning your network connections off and back on. It doesn't access your documents, photos, passwords, browser data, or other personal files.</p>
@@ -868,10 +931,37 @@ details p + p { margin-top: -8px; }
         <p>Bluetooth continues working normally. Your AirPods, wireless mouse, keyboard, and Apple Watch will keep working as usual.</p>
       </details>
       <details>
+        <summary>Does Vow block apps like Discord, Slack, and Mail, or only browsers?</summary>
+        <p>Everything. Vow takes your whole Mac offline, so every browser, app and terminal tool loses its connection at once, including Discord, Slack, Telegram, WhatsApp and Mail.</p>
+        <p>Your apps stay open, so you can still read old messages offline. Nothing new comes in until your session ends.</p>
+      </details>
+      <details>
+        <summary>Will Vow break my VPN or network settings?</summary>
+        <p>No. Vow never touches proxies, /etc/hosts or DNS settings, and when a session ends it restores your network exactly as it was before.</p>
+        <p>While a session is running, VPN connections are off along with everything else.</p>
+      </details>
+      <details>
         <summary>What happens if my Mac is asleep when a scheduled session starts?</summary>
         <p>Vow handles scheduled sessions even when your Mac is asleep.</p>
         <p>If your Mac wakes up within one minute of the scheduled start time, the full session will run.</p>
         <p>If it wakes up later, Vow starts the session for the remaining time, provided at least 15 minutes are left in the scheduled window.</p>
+      </details>
+      <details>
+        <summary>Does Vow work on Intel Macs or older versions of macOS?</summary>
+        <p>No. Vow requires macOS 26 or later on a Mac with Apple Silicon (M1 or newer). It doesn't run on Intel Macs.</p>
+      </details>
+      <details>
+        <summary>How is Vow different from Freedom, Cold Turkey, or SelfControl?</summary>
+        <p>Freedom, Cold Turkey and SelfControl block lists of websites (and, in some cases, apps) that you set up and maintain. Vow doesn't use lists: it turns off your Mac's whole internet connection for the time you choose, so there's nothing to keep up to date or work around.</p>
+        <p>Pick a list-based blocker if you want to block some sites and keep the rest. Pick Vow if you want quiet. See the <a href="#compare">comparison table</a> for Freedom and Cold Turkey.</p>
+      </details>
+      <details>
+        <summary>Can I pay in my local currency?</summary>
+        <p>Yes. Checkout is handled by Paddle, which shows the price in your local currency and supports local payment methods, including UPI in India. The base price is $9.99 USD.</p>
+      </details>
+      <details>
+        <summary>Is there a subscription?</summary>
+        <p>No. Vow is a one-time purchase: pay once and keep it, with all future 1.x updates included. One license covers up to 2 personal Macs, and you can try 3 full sessions free before you buy.</p>
       </details>
       <details>
         <summary>What is your refund policy?</summary>
