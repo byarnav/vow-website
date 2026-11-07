@@ -485,8 +485,9 @@ details p + p { margin-top: -8px; }
   line-height: 1.1;
   margin: 0;
 }
-.buy-price {
+.buy-card .buy-price {
   margin: 14px 0 0;
+  color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
   font-size: clamp(48px, 7vw, 64px);
   font-weight: 600;
