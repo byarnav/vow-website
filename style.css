@@ -100,7 +100,7 @@ h1:not(.eyebrow), h2, h3, .statement {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
   letter-spacing: -0.03em; margin: 0;
 }
-h1:not(.eyebrow), .statement { font-size: clamp(40px, 6.8vw, 72px); line-height: 1.05; font-weight: 700; letter-spacing: -0.038em; }
+h1:not(.eyebrow), .statement { font-size: clamp(40px, 6.8vw, 72px); line-height: 1.05; font-weight: 700; letter-spacing: -0.038em; text-wrap: balance; }
 h2 { font-size: clamp(32px, 4.8vw, 52px); line-height: 1.08; font-weight: 700; margin-bottom: 16px; }
 h3 { font-size: 22px; line-height: 1.2; font-weight: 600; margin-bottom: 10px; }
 .lead { font-size: clamp(19px, 2.4vw, 24px); line-height: 1.38; color: var(--muted); margin: 20px auto 0; max-width: 32em; font-weight: 400; }
