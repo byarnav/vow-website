@@ -213,6 +213,7 @@
   }
 
   if (openBtn) openBtn.addEventListener('click', openDialog);
+  if (window.location.hash === '#lost-key') openDialog();
   if (closeBtn) closeBtn.addEventListener('click', function () {
     dialog.close();
   });
