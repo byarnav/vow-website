@@ -87,38 +87,6 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How do I block the internet on my Mac for a set time?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Open Vow, choose how long to stay offline (anywhere from 5 minutes to 24 hours), and press Go Offline. Vow turns off every network connection on your Mac and keeps it off until the timer ends, even if you quit the app or restart your Mac. You can also add schedules, such as weekdays at 9:00, so sessions start on their own."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is my Mac safe with Vow?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Vow is signed with an Apple Developer ID and notarized by Apple, which means Apple has scanned it for malware. It has one job: turning your network connections off and back on. It doesn't access your documents, photos, passwords, browser data, or other personal files."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much information does Vow collect?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "None for analytics or tracking. Vow doesn't require an account or your email address. It only connects to the internet to check for updates and validate your license key with our secure license server (license.byarnav.com). These checks never happen while a session is running. For more details, you can read our Privacy Policy."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I uninstall Vow whenever I want?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! You can uninstall Vow whenever you're not in an active session. Uninstalling removes both the app and its helper. You'll find step-by-step instructions in Vow's Help menu."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "What if something goes wrong and I'm stuck offline?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -127,42 +95,10 @@
         },
         {
           "@type": "Question",
-          "name": "Why isn't Vow available on the Mac App Store?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Apple's App Store sandbox restrictions don't allow the kind of system-level control Vow needs to perform its core function. That's why Vow is distributed directly rather than through the Mac App Store. However, Vow is signed with an Apple Developer ID and notarized by Apple, so macOS can verify its developer signature and notarization status."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "What if I really need the internet during a session?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Life happens. If you absolutely need to get online, you can request an early unlock. Your Mac will stay offline for another 15 minutes before your internet connection is restored. This gives you time to reconsider and stay focused. You can change your mind during those 15 minutes and continue your session. If 15 minutes or less are already left, you can simply wait for the timer to finish."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I bypass Vow by quitting the app, restarting my Mac, or deleting it?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Your session timer continues running even if you quit Vow or restart your Mac. However, don't delete Vow during an active session. Since your network connection is already disabled at the system level, deleting the app won't restore your internet. It could also remove the helper responsible for restoring your network when the timer ends. Let your session finish before uninstalling Vow."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which connections does Vow block? Does Bluetooth still work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Vow disables your Mac's internet and network connections, including Wi-Fi, Ethernet, VPN connections, and personal hotspots. It also prevents new network connections from getting you online during an active session. Bluetooth continues working normally. Your AirPods, wireless mouse, keyboard, and Apple Watch will keep working as usual."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Vow block apps like Discord, Slack, and Mail, or only browsers?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Everything. Vow takes your whole Mac offline, so every browser, app and terminal tool loses its connection at once, including Discord, Slack, Telegram, WhatsApp and Mail. Your apps stay open, so you can still read old messages offline. Nothing new comes in until your session ends."
           }
         },
         {
@@ -183,10 +119,18 @@
         },
         {
           "@type": "Question",
-          "name": "How is Vow different from Freedom, Cold Turkey, or SelfControl?",
+          "name": "Why isn't Vow available on the Mac App Store?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Freedom, Cold Turkey and SelfControl block lists of websites (and, in some cases, apps) that you set up and maintain. Vow doesn't use lists: it turns off your Mac's whole internet connection for the time you choose, so there's nothing to keep up to date or work around. Pick a list-based blocker if you want to block some sites and keep the rest. Pick Vow if you want quiet. See the comparison table for Freedom and Cold Turkey."
+            "text": "Apple's App Store sandbox restrictions don't allow the kind of system-level control Vow needs to perform its core function. That's why Vow is distributed directly rather than through the Mac App Store. However, Vow is signed with an Apple Developer ID and notarized by Apple, so macOS can verify its developer signature and notarization status."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I uninstall Vow whenever I want?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! You can uninstall Vow whenever you're not in an active session. Uninstalling removes both the app and its helper. You'll find step-by-step instructions in Vow's Help menu."
           }
         },
         {
@@ -375,9 +319,12 @@ h3 { font-size: 22px; line-height: 1.2; font-weight: 600; margin-bottom: 10px; }
 .bento-shot figcaption strong { color: var(--text); font-weight: 600; }
 .bento-wide { padding: 28px; }
 
-/* Apple Bento 3-Column Grid */
+/* Apple Bento Grid */
 .bento-grid-3 {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+.bento-grid-4 {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
 }
 .bento-card {
   background: var(--card); border-radius: 24px; padding: 32px;
@@ -451,6 +398,18 @@ tbody td strong, tbody th strong { font-weight: 600; }
 .price li { padding: 9px 0; color: var(--muted); font-size: 17px; }
 .price li::before { content: "\2713"; margin-right: 12px; color: var(--g1); font-weight: 700; }
 
+/* Pricing Wrap & Trust Strip */
+.pricing-wrap { max-width: 520px; margin: 0 auto; }
+.pricing-wrap .buy-card {
+  border: 1px solid color-mix(in srgb, var(--line) 60%, transparent);
+  align-items: center; justify-content: flex-start; text-align: center;
+}
+.trust-strip {
+  text-align: center; color: var(--muted); font-size: 14px; line-height: 1.5;
+  margin: 24px auto 0; max-width: 580px;
+}
+.buy-card .btn.secondary { background: var(--bg); border-color: var(--line); }
+
 /* FAQ ("Questions? Answers.") */
 .faq-header {
   display: flex; align-items: baseline; justify-content: space-between;
@@ -493,8 +452,12 @@ details p + p { margin-top: -8px; }
 .foot-mail { white-space: nowrap; }
 
 /* Responsive */
+@media (max-width: 960px) {
+  .bento-grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 820px) {
-  .bento-grid-3 { grid-template-columns: 1fr 1fr; }
+  .bento-grid-3, .bento-grid-4 { grid-template-columns: 1fr 1fr; }
   .steps { grid-template-columns: 1fr; }
   .facts { grid-template-columns: 1fr 1fr; }
 }
@@ -506,8 +469,8 @@ details p + p { margin-top: -8px; }
   .foot-mail { display: block; white-space: normal; }
   .foot-mail .dot { display: none; }
   nav { gap: 14px; }
-  .bento-prose, .bento-dark, .bento-table, .price { padding: 28px 22px; border-radius: 22px; }
-  .bento-grid-3 { grid-template-columns: 1fr; }
+  .bento-prose, .bento-dark, .bento-table, .price, .pricing-wrap .buy-card { padding: 28px 22px; border-radius: 22px; }
+  .bento-grid-3, .bento-grid-4 { grid-template-columns: 1fr; }
   .list div { grid-template-columns: 1fr; gap: 6px; }
   .btn { flex: 1 1 auto; text-align: center; }
 }
@@ -676,12 +639,26 @@ details p + p { margin-top: -8px; }
     </div>
   </section>
 
+  <!-- It Stays (Apple Feature Spec List) -->
+  <section class="wrap">
+    <div class="section-head">
+      <h2>Once you make a Vow, it stays.</h2>
+    </div>
+    <dl class="list">
+      <div><dt>It survives everything</dt><dd>Quitting Vow or restarting your Mac won't bring the internet back.</dd></div>
+      <div><dt>Every connection</dt><dd>Wi-Fi, Ethernet, USB adapters and iPhone hotspots are all turned off. Plugging in a cable won't get around it.</dd></div>
+      <div><dt>No cancel button</dt><dd>Need out early? You can ask, but your Mac stays offline for 15 more minutes first. Usually the urge passes.</dd></div>
+      <div><dt>Your Mac still works</dt><dd>Files, apps and local AI models keep working. If you code, localhost and local containers (via localhost ports) keep working too.</dd></div>
+      <div><dt>Safe if something breaks</dt><dd>If Vow's saved session is ever damaged, it gives your internet back instead of leaving you stuck.</dd></div>
+    </dl>
+  </section>
+
   <!-- Uses (Apple Bento Grid) -->
   <section class="wrap-wide">
     <div class="section-head">
       <h2>Make time for what matters.</h2>
     </div>
-    <div class="bento-grid-3">
+    <div class="bento-grid-4">
       <div class="bento-card">
         <h3>Study</h3>
         <p>Read, write and finish assignments without drifting into YouTube, Reddit or social media.</p>
@@ -695,32 +672,10 @@ details p + p { margin-top: -8px; }
         <p>Set aside an hour or the whole evening for your partner, your kids, or yourself.</p>
       </div>
       <div class="bento-card">
-        <h3>Better habits</h3>
-        <p>Step away from endless scrolling, streaming, adult sites, or "just one more episode" at night.</p>
-      </div>
-      <div class="bento-card">
-        <h3>Private work</h3>
-        <p>Keep patient notes, client files or confidential code air-gapped, so nothing goes online by accident.</p>
-      </div>
-      <div class="bento-card">
         <h3>Local AI &amp; dev</h3>
         <p>Run Ollama, local models, databases, and <code>localhost</code> servers at full speed in complete silence.</p>
       </div>
     </div>
-  </section>
-
-  <!-- It Stays (Apple Feature Spec List) -->
-  <section class="wrap">
-    <div class="section-head">
-      <h2>Once you make a Vow, it stays.</h2>
-    </div>
-    <dl class="list">
-      <div><dt>It survives everything</dt><dd>Quitting Vow or restarting your Mac won't bring the internet back.</dd></div>
-      <div><dt>Every connection</dt><dd>Wi-Fi, Ethernet, USB adapters and iPhone hotspots are all turned off. Plugging in a cable won't get around it.</dd></div>
-      <div><dt>No cancel button</dt><dd>Need out early? You can ask, but your Mac stays offline for 15 more minutes first. Usually the urge passes.</dd></div>
-      <div><dt>Your Mac still works</dt><dd>Files, apps and local AI models keep working. If you code, localhost and local containers (via localhost ports) keep working too.</dd></div>
-      <div><dt>Safe if something breaks</dt><dd>If Vow's saved session is ever damaged, it gives your internet back instead of leaving you stuck.</dd></div>
-    </dl>
   </section>
 
   <!-- Compare (Apple "Keep exploring" Comparison Table) -->
@@ -737,17 +692,11 @@ details p + p { margin-top: -8px; }
           </thead>
           <tbody>
             <tr><th scope="row">What it stops</th><td class="us"><strong>The whole internet</strong> &mdash; every browser, app, and terminal tool goes quiet at once</td><td>Sites and apps on your lists (or all websites)</td><td>Sites and apps on your lists (or all websites via *.*)</td></tr>
-            <tr><th scope="row">How it works</th><td class="us"><strong>Turns off the Mac's network connections</strong> using built-in macOS tools</td><td>Local system proxy (or Non-Proxy browser filter) + app blocker</td><td>Browser extensions check every URL + background agent quits blocked apps</td></tr>
-            <tr><th scope="row">Browser extensions</th><td class="us"><strong>None.</strong> Works in every browser automatically and never sees what sites you visit</td><td>Optional (Non-Proxy mode hides Firefox on Mac)</td><td>Required for website blocking (quits browsers without it; logs site stats by default)</td></tr>
-            <tr><th scope="row">Non-browser apps (<strong>Discord, Telegram, WhatsApp, Mail</strong>)</th><td class="us"><strong>All offline automatically</strong> &mdash; apps stay open so you can read old messages offline, with zero new pings</td><td>Website blocks only filter proxy traffic; stopping an app closes/hides the app window</td><td>Website blocks (*.*) only work in browsers; stopping an app requires Pro and force-quits the app</td></tr>
-            <tr><th scope="row">Network settings &amp; VPNs</th><td class="us"><strong>Clean.</strong> Never touches proxies, /etc/hosts, or DNS. Restores your exact pre-session state</td><td>Modifies macOS system proxies by default (can conflict with work and commercial VPNs)</td><td>Does not modify system proxies or VPN settings</td></tr>
-            <tr><th scope="row">Localhost and dev tools</th><td class="us"><strong>Always work</strong> (lo0 loopback stays up; local containers work via localhost ports)</td><td>Can conflict with local proxy (needs localhost / 127.0.0.1 proxy bypass rules)</td><td>Needs manual Website Exceptions for localhost when blocking all sites (*.*)</td></tr>
-            <tr><th scope="row">Lists to keep up to date</th><td class="us"><strong>None</strong></td><td>Yes (websites, apps, and exceptions)</td><td>Yes (websites, apps, exceptions, and extensions)</td></tr>
-            <tr><th scope="row">If you quit the app</th><td class="us"><strong>Nothing changes.</strong> A system helper (SMAppService) holds the timer across quit and restart</td><td>Requires Locked Mode (Premium) + &quot;Block Activity Monitor&quot; enabled</td><td>Background agent respawns automatically; extensions close browsers if stopped</td></tr>
-            <tr><th scope="row">If an emergency happens</th><td class="us"><strong>Built-in 15-minute cooldown</strong> &mdash; stops impulses, but never traps you in a real emergency</td><td>Instant cancel in standard mode, or locked until timer ends in Locked Mode</td><td>Configurable breaks/delays in Pro, or locked until the timer ends</td></tr>
+            <tr><th scope="row">Browser extensions</th><td class="us"><strong>None.</strong> Works across every browser automatically without seeing what sites you visit</td><td>Optional (Non-Proxy mode hides Firefox on Mac)</td><td>Required for website blocking (quits browsers without it)</td></tr>
+            <tr><th scope="row">Non-browser apps (<strong>Discord, Telegram, WhatsApp, Mail</strong>)</th><td class="us"><strong>All offline automatically.</strong> Apps stay open so you can read old messages offline, with zero new pings</td><td>Website blocks only filter proxy traffic; stopping an app closes the window</td><td>Website blocks (*.*) only work in browsers; stopping an app requires Pro and force-quits the app</td></tr>
+            <tr><th scope="row">If you quit or restart</th><td class="us"><strong>Timer keeps running.</strong> The lock stays in place across quit and restart until your timer ends</td><td>Requires Locked Mode (Premium) + &quot;Block Activity Monitor&quot; enabled</td><td>Background agent respawns automatically; extensions close browsers if stopped</td></tr>
             <tr><th scope="row">Account needed</th><td class="us"><strong>No.</strong> 100% local on your Mac</td><td><strong>Yes</strong> (syncs with cloud dashboard)</td><td><strong>No</strong> (stored locally)</td></tr>
-            <tr><th scope="row">Price</th><td class="us"><strong>$9.99 once</strong> (3 free sessions)</td><td>$8.99/mo, $39.99/yr, or $99.50 lifetime</td><td>$45 once for Pro (free version is websites only)</td></tr>
-            <tr><th scope="row">Runs on</th><td class="us"><strong>Mac only (Apple Silicon)</strong></td><td>Mac, Windows, iPhone, iPad, Android, ChromeOS</td><td>Mac and Windows</td></tr>
+            <tr><th scope="row">Price</th><td class="us"><strong><span data-price-text>$9.99</span> once</strong> (3 free sessions)</td><td>$8.99/mo, $39.99/yr, or $99.50 lifetime</td><td>$45 once for Pro (free version is websites only)</td></tr>
           </tbody>
         </table>
       </div>
@@ -756,31 +705,9 @@ details p + p { margin-top: -8px; }
     </div>
   </section>
 
-  <!-- Values (Modeled after Apple PDF "Our values lead the way.") -->
-  <section class="wrap-wide">
-    <div class="section-head">
-      <h2>Private by design. Safe by default.</h2>
-    </div>
-    <div class="bento-grid-3">
-      <div class="bento-card">
-        <h3>Privacy. Built in.</h3>
-        <p>No analytics. No tracking. No account. Vow goes online for two things only: checking for updates, and verifying your license key with our secure license server.</p>
-        <p class="card-link"><a href="privacy.html">Read the privacy policy &rsaquo;</a></p>
-      </div>
-      <div class="bento-card">
-        <h3>Notarized by Apple.</h3>
-        <p>Signed with an Apple Developer ID and scanned by Apple for malware. The background helper has zero networking code and cannot send data anywhere.</p>
-      </div>
-      <div class="bento-card">
-        <h3>Fail-open safety.</h3>
-        <p>If Vow's saved session file is ever corrupted by a power loss or crash, it automatically restores your internet instead of leaving you stranded offline.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Closing block: Buy card + What's New -->
+  <!-- Pricing -->
   <section class="wrap-wide" id="pricing" aria-labelledby="buy-h">
-    <div class="closing-grid">
+    <div class="pricing-wrap">
       <article class="bento-card buy-card">
         <img src="images/app-icon.png" width="88" height="88" alt="" class="buy-icon">
         <h2 id="buy-h">Vow</h2>
@@ -797,58 +724,17 @@ details p + p { margin-top: -8px; }
         <p class="buy-status fine" role="status" aria-live="polite"></p>
         <p class="fine buy-disclaimer">Secure checkout by Paddle, our merchant of record. macOS 26 or later, Apple Silicon.</p>
       </article>
-      <article class="bento-card news-card" aria-labelledby="news-h">
-        <h3 id="news-h">What's New</h3>
-        <ol class="news-list">
-          <li>
-            <div class="news-meta"><span class="news-pill">1.0.16</span><span class="news-dot" aria-hidden="true">&middot;</span><time datetime="2026-11">November 2026</time></div>
-            <p>Quiet login launch in the menu bar, helper update indicators.</p>
-          </li>
-          <li>
-            <div class="news-meta"><span class="news-pill">1.0.15</span><span class="news-dot" aria-hidden="true">&middot;</span><time datetime="2026-11">November 2026</time></div>
-            <p>Idle CPU reduced to ~0.1%, full keyboard navigation and VoiceOver accessibility.</p>
-          </li>
-          <li>
-            <div class="news-meta"><span class="news-pill">1.0.14</span><span class="news-dot" aria-hidden="true">&middot;</span><time datetime="2026-11">November 2026</time></div>
-            <p>Smoother license key entry during trial, refreshed interface polish.</p>
-          </li>
-          <li>
-            <div class="news-meta"><span class="news-pill">1.0.13</span><span class="news-dot" aria-hidden="true">&middot;</span><time datetime="2026-11">November 2026</time></div>
-            <p>Automatic checkout in your local currency (with UPI support in India), faster background updates.</p>
-          </li>
-          <li>
-            <div class="news-meta"><span class="news-pill">1.0.12</span><span class="news-dot" aria-hidden="true">&middot;</span><time datetime="2026-11">November 2026</time></div>
-            <p>Scheduled deep-work sessions and custom lock durations.</p>
-          </li>
-        </ol>
-      </article>
+      <p class="trust-strip">Notarized by Apple &middot; No analytics &middot; No account &middot; Restores internet if anything breaks</p>
     </div>
   </section>
 
   <!-- FAQ -->
   <section class="wrap" id="faq">
-    <h2>Questions about Vow.</h2>
+    <div class="faq-header">
+      <h2>Questions about Vow.</h2>
+      <button type="button" class="expand-btn" data-faq-toggle>Expand all</button>
+    </div>
     <div class="faq">
-      <details>
-        <summary>How do I block the internet on my Mac for a set time?</summary>
-        <p>Open Vow, choose how long to stay offline (anywhere from 5 minutes to 24 hours), and press Go Offline.</p>
-        <p>Vow turns off every network connection on your Mac and keeps it off until the timer ends, even if you quit the app or restart your Mac. You can also add schedules, such as weekdays at 9:00, so sessions start on their own.</p>
-      </details>
-      <details>
-        <summary>Is my Mac safe with Vow?</summary>
-        <p>Yes. Vow is signed with an Apple Developer ID and notarized by Apple, which means Apple has scanned it for malware. It has one job: turning your network connections off and back on. It doesn't access your documents, photos, passwords, browser data, or other personal files.</p>
-      </details>
-      <details>
-        <summary>How much information does Vow collect?</summary>
-        <p>None for analytics or tracking. Vow doesn't require an account or your email address.</p>
-        <p>It only connects to the internet to check for updates and validate your license key with our secure license server (license.byarnav.com). These checks never happen while a session is running.</p>
-        <p>For more details, you can read our <a href="privacy.html">Privacy Policy</a>.</p>
-      </details>
-      <details>
-        <summary>Can I uninstall Vow whenever I want?</summary>
-        <p>Yes! You can uninstall Vow whenever you're not in an active session.</p>
-        <p>Uninstalling removes both the app and its helper. You'll find step-by-step instructions in Vow's Help menu.</p>
-      </details>
       <details>
         <summary>What if something goes wrong and I'm stuck offline?</summary>
         <p>Vow is designed to restore your internet connection when something goes wrong with its saved timer.</p>
@@ -856,33 +742,10 @@ details p + p { margin-top: -8px; }
         <p>You can also find recovery and uninstall instructions in Vow's Help menu. Still need help? Email us at <a href="mailto:support@byarnav.com">support@byarnav.com</a>.</p>
       </details>
       <details>
-        <summary>Why isn't Vow available on the Mac App Store?</summary>
-        <p>Apple's App Store sandbox restrictions don't allow the kind of system-level control Vow needs to perform its core function.</p>
-        <p>That's why Vow is distributed directly rather than through the Mac App Store.</p>
-        <p>However, Vow is signed with an Apple Developer ID and notarized by Apple, so macOS can verify its developer signature and notarization status.</p>
-      </details>
-      <details>
         <summary>What if I really need the internet during a session?</summary>
         <p>Life happens. If you absolutely need to get online, you can request an early unlock.</p>
         <p>Your Mac will stay offline for another 15 minutes before your internet connection is restored. This gives you time to reconsider and stay focused.</p>
         <p>You can change your mind during those 15 minutes and continue your session. If 15 minutes or less are already left, you can simply wait for the timer to finish.</p>
-      </details>
-      <details>
-        <summary>Can I bypass Vow by quitting the app, restarting my Mac, or deleting it?</summary>
-        <p>No. Your session timer continues running even if you quit Vow or restart your Mac.</p>
-        <p>However, don't delete Vow during an active session. Since your network connection is already disabled at the system level, deleting the app won't restore your internet. It could also remove the helper responsible for restoring your network when the timer ends.</p>
-        <p>Let your session finish before uninstalling Vow.</p>
-      </details>
-      <details>
-        <summary>Which connections does Vow block? Does Bluetooth still work?</summary>
-        <p>Vow disables your Mac's internet and network connections, including Wi-Fi, Ethernet, VPN connections, and personal hotspots.</p>
-        <p>It also prevents new network connections from getting you online during an active session.</p>
-        <p>Bluetooth continues working normally. Your AirPods, wireless mouse, keyboard, and Apple Watch will keep working as usual.</p>
-      </details>
-      <details>
-        <summary>Does Vow block apps like Discord, Slack, and Mail, or only browsers?</summary>
-        <p>Everything. Vow takes your whole Mac offline, so every browser, app and terminal tool loses its connection at once, including Discord, Slack, Telegram, WhatsApp and Mail.</p>
-        <p>Your apps stay open, so you can still read old messages offline. Nothing new comes in until your session ends.</p>
       </details>
       <details>
         <summary>Will Vow break my VPN or network settings?</summary>
@@ -892,13 +755,18 @@ details p + p { margin-top: -8px; }
       <details>
         <summary>What happens if my Mac is asleep when a scheduled session starts?</summary>
         <p>Vow handles scheduled sessions even when your Mac is asleep.</p>
-        <p>If your Mac wakes up within one minute of the scheduled start time, the full session will run.</p>
-        <p>If it wakes up later, Vow starts the session for the remaining time, provided at least 15 minutes are left in the scheduled window.</p>
+        <p>If your Mac wakes up within one minute of the scheduled start time, the full session will run. If it wakes up later, Vow starts the session for the remaining time, provided at least 15 minutes are left in the scheduled window.</p>
       </details>
       <details>
-        <summary>How is Vow different from Freedom, Cold Turkey, or SelfControl?</summary>
-        <p>Freedom, Cold Turkey and SelfControl block lists of websites (and, in some cases, apps) that you set up and maintain. Vow doesn't use lists: it turns off your Mac's whole internet connection for the time you choose, so there's nothing to keep up to date or work around.</p>
-        <p>Pick a list-based blocker if you want to block some sites and keep the rest. Pick Vow if you want quiet. See the <a href="#compare">comparison table</a> for Freedom and Cold Turkey.</p>
+        <summary>Why isn't Vow available on the Mac App Store?</summary>
+        <p>Apple's App Store sandbox restrictions don't allow the kind of system-level control Vow needs to perform its core function.</p>
+        <p>That's why Vow is distributed directly rather than through the Mac App Store.</p>
+        <p>However, Vow is signed with an Apple Developer ID and notarized by Apple, so macOS can verify its developer signature and notarization status.</p>
+      </details>
+      <details>
+        <summary>Can I uninstall Vow whenever I want?</summary>
+        <p>Yes! You can uninstall Vow whenever you're not in an active session.</p>
+        <p>Uninstalling removes both the app and its helper. You'll find step-by-step instructions in Vow's Help menu.</p>
       </details>
       <details>
         <summary>What is your refund policy?</summary>

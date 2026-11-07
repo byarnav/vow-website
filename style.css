@@ -199,6 +199,9 @@ h3 { font-size: 22px; line-height: 1.2; font-weight: 600; margin-bottom: 10px; }
 .bento-grid-3 {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
 }
+.bento-grid-4 {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+}
 .bento-card {
   background: var(--card); border-radius: 24px; padding: 32px;
   display: flex; flex-direction: column; justify-content: space-between;
@@ -324,6 +327,10 @@ details p + p { margin-top: -8px; }
 .policy strong { color: var(--text); font-weight: 600; }
 
 /* Responsive */
+@media (max-width: 960px) {
+  .bento-grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 820px) {
   .bento-grid-3 { grid-template-columns: 1fr 1fr; }
   .steps { grid-template-columns: 1fr; }
@@ -340,7 +347,7 @@ details p + p { margin-top: -8px; }
   nav { gap: 14px; }
   .vow-card { border-radius: 20px; padding: 14px 16px; }
   .bento-prose, .bento-dark, .bento-table, .price { padding: 28px 22px; border-radius: 22px; }
-  .bento-grid-3 { grid-template-columns: 1fr; }
+  .bento-grid-3, .bento-grid-4 { grid-template-columns: 1fr; }
   .list div { grid-template-columns: 1fr; gap: 6px; }
   .btn { flex: 1 1 auto; text-align: center; }
 }
@@ -442,21 +449,24 @@ details p + p { margin-top: -8px; }
   .rail-slide img { border-radius: 20px; }
 }
 
-/* ---- Closing grid: Buy card + What's New ---- */
-.closing-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-  align-items: stretch;
+/* ---- Pricing / Buy card ---- */
+.pricing-wrap {
+  max-width: 520px;
+  margin: 0 auto;
 }
-.closing-grid .buy-card,
-.closing-grid .news-card {
+.pricing-wrap .buy-card {
   border: 1px solid color-mix(in srgb, var(--line) 60%, transparent);
-}
-.closing-grid .buy-card {
   align-items: center;
   justify-content: flex-start;
   text-align: center;
+}
+.trust-strip {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 24px auto 0;
+  max-width: 580px;
 }
 .buy-icon {
   display: block;
@@ -510,7 +520,7 @@ details p + p { margin-top: -8px; }
   width: 100%;
   margin-top: 28px;
 }
-.closing-grid .buy-card .btn.secondary {
+.buy-card .btn.secondary {
   background: var(--bg);
   border-color: var(--line);
 }
@@ -758,6 +768,7 @@ details p + p { margin-top: -8px; }
 }
 
 @media (max-width: 640px) {
+  .pricing-wrap .buy-card,
   .closing-grid .buy-card,
   .closing-grid .news-card {
     padding: 28px 22px;
