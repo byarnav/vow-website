@@ -24,7 +24,7 @@
 <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=11">
+<link rel="stylesheet" href="style.css?v=13">
 <script src="https://cdn.paddle.com/paddle/v2/paddle.js" defer></script>
 <script type="application/ld+json">
 {
@@ -411,8 +411,10 @@ tbody td strong, tbody th strong { font-weight: 600; }
 }
 .trust-strip {
   text-align: center; color: var(--muted); font-size: 14px; line-height: 1.5;
-  margin: 24px auto 0; max-width: 580px;
+  margin: 24px auto 0; max-width: 580px; text-wrap: balance;
 }
+.trust-strip .grp { white-space: nowrap; }
+@media (max-width: 520px) { .trust-strip .sep { display: none; } .trust-strip .grp { display: block; } }
 .buy-card .btn.secondary { background: var(--bg); border-color: var(--line); }
 
 /* FAQ ("Questions? Answers.") */
@@ -729,7 +731,7 @@ details p + p { margin-top: -8px; }
         <p class="buy-status fine" role="status" aria-live="polite"></p>
         <p class="fine buy-disclaimer">Secure checkout by Paddle, our merchant of record. macOS 26 or later, Apple Silicon.</p>
       </article>
-      <p class="trust-strip">Notarized by Apple &middot; No analytics &middot; No account &middot; Fails safe</p>
+      <p class="trust-strip"><span class="grp">Notarized by Apple &middot; No analytics</span><span class="sep"> &middot; </span><span class="grp">No account &middot; Fails safe</span></p>
     </div>
   </section>
 

@@ -472,7 +472,10 @@ details p + p { margin-top: -8px; }
   line-height: 1.5;
   margin: 24px auto 0;
   max-width: 580px;
+  text-wrap: balance;
 }
+.trust-strip .grp { white-space: nowrap; }
+@media (max-width: 520px) { .trust-strip .sep { display: none; } .trust-strip .grp { display: block; } }
 .buy-icon {
   display: block;
   width: 88px;
