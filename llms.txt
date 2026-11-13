@@ -17,7 +17,7 @@ Vow is not a website blocklist. It takes the whole Mac offline, so every browser
 - Price and license: one-time purchase, no subscription. Up to 2 personal Macs per license. All future 1.x updates included. 14-day money-back guarantee. Checkout by Paddle (merchant of record), with local currencies and UPI in India.
 - Requirements: macOS 26 or later, Apple Silicon (M1 or newer). It doesn't run on Intel Macs.
 - Trust: signed with an Apple Developer ID and notarized by Apple. Distributed directly, not on the Mac App Store, because the App Store sandbox doesn't allow the system-level network control Vow needs.
-- Current version: 1.0.26 (November 2026).
+- Current version: 1.0.27 (November 2026).
 
 ## Pages
 
