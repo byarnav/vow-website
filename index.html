@@ -24,7 +24,7 @@
 <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=13">
+<link rel="stylesheet" href="style.css?v=14">
 <script src="https://cdn.paddle.com/paddle/v2/paddle.js" defer></script>
 <script type="application/ld+json">
 {
@@ -674,29 +674,78 @@ details p + p { margin-top: -8px; }
     </dl>
   </section>
 
-  <!-- Uses (Apple Bento Grid) -->
-  <section class="wrap-wide">
+  <!-- Uses: who Vow is for -->
+  <section class="wrap-wide" id="uses" aria-labelledby="uses-h">
     <div class="section-head">
-      <h2>Make time for what matters.</h2>
+      <h2 id="uses-h">Make time for what matters.</h2>
     </div>
-    <div class="bento-grid-4">
-      <div class="bento-card">
-        <h3>Study</h3>
-        <p>Read, write and finish assignments without drifting into YouTube, Reddit or social media.</p>
+    <div class="bento-grid-4 uses-grid">
+      <div class="bento-card use-card">
+        <h3>Exam prep</h3>
+        <p>SAT, JEE, NEET, UPSC or finals. Hours of practice papers without &ldquo;just one video&rdquo;.</p>
       </div>
-      <div class="bento-card">
+      <div class="bento-card use-card">
+        <h3>ADHD focus</h3>
+        <p>When willpower runs out, the internet is already gone. Start small, with 15 minutes.</p>
+        <a class="card-link" href="/adhd-focus-mac/">ADHD focus guide &rsaquo;</a>
+      </div>
+      <div class="bento-card use-card">
+        <h3>Stop doomscrolling</h3>
+        <p>News, Reddit, X and endless feeds. Make your scroll hour an offline hour.</p>
+        <a class="card-link" href="/stop-doomscrolling/">Doomscrolling guide &rsaquo;</a>
+      </div>
+      <div class="bento-card use-card">
+        <h3>YouTube rabbit holes</h3>
+        <p>No autoplay, no sidebar, no &ldquo;one more&rdquo;. Download what you need first.</p>
+      </div>
+      <div class="bento-card use-card">
+        <h3>Breaking a habit</h3>
+        <p>Betting sites, adult sites, endless games. When the urge hits, there&rsquo;s nothing to open on your Mac.</p>
+        <a class="card-link" href="/stop-doomscrolling/#habits">Where to find help &rsaquo;</a>
+      </div>
+      <div class="bento-card use-card">
         <h3>Deep work</h3>
-        <p>Code, research and write for hours without Slack pings or another browser tab pulling you away.</p>
+        <p>Code, research and write for hours without Slack pings or another tab pulling you away.</p>
       </div>
-      <div class="bento-card">
-        <h3>Family</h3>
-        <p>Set aside an hour or the whole evening for your partner, your kids, or yourself.</p>
+      <div class="bento-card use-card">
+        <h3>Better nights</h3>
+        <p>Schedule Vow for 22:30 every night, so late-night scrolling can&rsquo;t start.</p>
       </div>
-      <div class="bento-card">
+      <div class="bento-card use-card">
         <h3>Local AI &amp; dev</h3>
-        <p>Run Ollama, local models, databases, and <code>localhost</code> servers at full speed in complete silence.</p>
+        <p>Run Ollama, local models, databases and <code>localhost</code> servers in complete silence.</p>
       </div>
     </div>
+  </section>
+
+  <!-- Research: why less internet helps -->
+  <section class="wrap-wide" id="research" aria-labelledby="research-h">
+    <div class="section-head">
+      <h2 id="research-h">What the research says.</h2>
+    </div>
+    <div class="research-grid">
+      <article class="bento-card research-card">
+        <p class="research-stat">91%</p>
+        <p>467 adults blocked the internet on their phones for two weeks. 91% got better in attention, mental health or well-being.</p>
+        <p class="research-cite">Castelo et al., <a href="https://doi.org/10.1093/pnasnexus/pgaf017"><cite>PNAS Nexus</cite>, 2025</a></p>
+      </article>
+      <article class="bento-card research-card">
+        <p class="research-stat">47 sec</p>
+        <p>How long people stayed on one screen, on average, before switching, in studies from 2016 to 2020.</p>
+        <p class="research-cite">Gloria Mark, <a href="https://www.universityofcalifornia.edu/news/how-sharpen-your-attention-and-meet-your-goals-2024"><cite>Attention Span</cite>, 2023</a></p>
+      </article>
+      <article class="bento-card research-card">
+        <p class="research-stat">Even off</p>
+        <p>Just having your phone on the desk, switched off, lowered scores on memory and thinking tests.</p>
+        <p class="research-cite">Ward et al., <a href="https://doi.org/10.1086/691462"><cite>J. Assoc. Consumer Research</cite>, 2017</a></p>
+      </article>
+      <article class="bento-card research-card">
+        <p class="research-stat">4 weeks</p>
+        <p>People who turned off Facebook for a month felt a bit happier, spent more time offline, and used it less afterwards.</p>
+        <p class="research-cite">Allcott et al., <a href="https://doi.org/10.1257/aer.20190658"><cite>American Economic Review</cite>, 2020</a></p>
+      </article>
+    </div>
+    <p class="fine research-note">These studies looked at phones and social media, not at Vow. They show why less internet helps. Vow is one way to get there on your Mac.</p>
   </section>
 
   <!-- Compare (Apple "Keep exploring" Comparison Table) -->
@@ -813,9 +862,46 @@ details p + p { margin-top: -8px; }
 
 <footer class="foot">
   <div class="foot-inner">
-    <p>Guides: <a href="/block-internet-on-mac/">Block the internet on a Mac</a> &middot; <a href="/freedom-alternative/">Freedom alternative</a> &middot; <a href="/cold-turkey-alternative/">Cold Turkey alternative</a> &middot; <a href="/selfcontrol-alternative/">SelfControl alternative</a></p>
-    <p><a href="/#faq">FAQ</a> &middot; <a href="/changelog/">Changelog</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="/refunds.html">Refunds</a> &middot; <a href="/privacy.html">Privacy</a> &middot; <a href="/activation.html">Manage activation</a> &middot; <button type="button" class="link-btn" data-open-lost-key>Lost your key?</button></p>
-    <p>&copy; 2026 <a href="https://byarnav.com">byArnav</a><span class="foot-mail"><span class="dot"> &middot; </span><a href="mailto:support@byarnav.com">support@byarnav.com</a></span></p>
+    <nav class="foot-cols" aria-label="Footer">
+      <div>
+        <p class="foot-h">Vow</p>
+        <ul>
+          <li><a href="/#pricing">Pricing</a></li>
+          <li><a href="/#compare">How Vow is different</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/changelog/">Changelog</a></li>
+          <li><a href="https://raw.githubusercontent.com/byarnav/offline-lock-releases/main/Vow.dmg">Download free</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-h">Guides</p>
+        <ul>
+          <li><a href="/block-internet-on-mac/">Block the internet on a Mac</a></li>
+          <li><a href="/adhd-focus-mac/">ADHD focus on a Mac</a></li>
+          <li><a href="/stop-doomscrolling/">Stop doomscrolling</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-h">Compare</p>
+        <ul>
+          <li><a href="/freedom-alternative/">Freedom alternative</a></li>
+          <li><a href="/cold-turkey-alternative/">Cold Turkey alternative</a></li>
+          <li><a href="/selfcontrol-alternative/">SelfControl alternative</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-h">Help</p>
+        <ul>
+          <li><a href="/activation.html">Manage activation</a></li>
+          <li><button type="button" class="link-btn" data-open-lost-key>Lost your key?</button></li>
+          <li><a href="/refunds.html">Refunds</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="mailto:support@byarnav.com">support@byarnav.com</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p class="foot-legal">Signed with an Apple Developer ID and notarized by Apple. No analytics. &copy; 2026 <a href="https://byarnav.com">byArnav</a></p>
   </div>
 </footer>
 

@@ -23,6 +23,8 @@ Vow is not a website blocklist. It takes the whole Mac offline, so every browser
 
 - [Home](https://vow.byarnav.com/): overview, comparison with Freedom and Cold Turkey, pricing, FAQ
 - [How to block the internet on a Mac](https://vow.byarnav.com/block-internet-on-mac/): built-in macOS options and how Vow works, step by step
+- [ADHD and focus on a Mac](https://vow.byarnav.com/adhd-focus-mac/): what research says about screens and attention, and a Mac setup for ADHD focus
+- [How to stop doomscrolling on your Mac](https://vow.byarnav.com/stop-doomscrolling/): research on cutting back, steps for a Mac, exam study tips, and where to find help for gambling and other compulsive habits
 - [Vow vs Freedom](https://vow.byarnav.com/freedom-alternative/): honest comparison, including when Freedom is the better choice
 - [Vow vs Cold Turkey](https://vow.byarnav.com/cold-turkey-alternative/): honest comparison, including when Cold Turkey is the better choice
 - [Vow vs SelfControl](https://vow.byarnav.com/selfcontrol-alternative/): comparison with the free, open-source SelfControl
