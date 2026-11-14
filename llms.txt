@@ -23,8 +23,13 @@ Vow is not a website blocklist. It takes the whole Mac offline, so every browser
 
 - [Home](https://vow.byarnav.com/): overview, comparison with Freedom and Cold Turkey, pricing, FAQ
 - [How to block the internet on a Mac](https://vow.byarnav.com/block-internet-on-mac/): built-in macOS options and how Vow works, step by step
+- [How to block websites on a Mac](https://vow.byarnav.com/block-websites-on-mac/): block Instagram, TikTok, YouTube, X (Twitter), Reddit and Facebook with Screen Time, and the addresses to block for each
+- [How to block adult sites on a Mac](https://vow.byarnav.com/block-adult-sites-on-mac/): Screen Time's Limit Adult Websites, family-safe DNS, and offline hours
+- [Free internet blockers for Mac](https://vow.byarnav.com/free-internet-blocker-mac/): free options compared (Screen Time, SelfControl, Cold Turkey free, extensions, DNS) and when Vow fits
+- [How to stay focused on a Mac](https://vow.byarnav.com/stay-focused-on-mac/): Do Not Disturb, notifications, full screen, blocking, and exam study tips
+- [Social media addiction](https://vow.byarnav.com/social-media-addiction/): signs, research and steps for Instagram, TikTok, YouTube, Reddit and X, plus help lines for gambling
+- [What the research says](https://vow.byarnav.com/research/): plain-English summaries of studies on phones, social media, attention and mood
 - [ADHD and focus on a Mac](https://vow.byarnav.com/adhd-focus-mac/): what research says about screens and attention, and a Mac setup for ADHD focus
-- [How to stop doomscrolling on your Mac](https://vow.byarnav.com/stop-doomscrolling/): research on cutting back, steps for a Mac, exam study tips, and where to find help for gambling and other compulsive habits
 - [Vow vs Freedom](https://vow.byarnav.com/freedom-alternative/): honest comparison, including when Freedom is the better choice
 - [Vow vs Cold Turkey](https://vow.byarnav.com/cold-turkey-alternative/): honest comparison, including when Cold Turkey is the better choice
 - [Vow vs SelfControl](https://vow.byarnav.com/selfcontrol-alternative/): comparison with the free, open-source SelfControl

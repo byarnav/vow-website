@@ -889,18 +889,6 @@ details p + p { margin-top: -8px; }
 .uses-grid .use-card p { font-size: 15px; }
 .uses-grid .use-card .card-link { margin-top: auto; padding-top: 16px; font-size: 15px; }
 
-/* ---- Research cards (homepage) ---- */
-.research-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
-.research-card { justify-content: flex-start; padding: 28px; }
-.research-card p { font-size: 15px; }
-.research-card .research-stat {
-  margin: 0 0 12px; color: var(--text); font-size: 40px; line-height: 1.05;
-  font-weight: 700; letter-spacing: -0.03em;
-}
-.research-card .research-cite { margin-top: auto; padding-top: 16px; font-size: 13px; }
-.research-card cite { font-style: italic; }
-#research .research-note { text-align: center; max-width: 40em; margin-left: auto; margin-right: auto; }
-
 /* ---- Article citations ---- */
 .article .cite { font-size: 0.7em; line-height: 0; margin-left: 1px; }
 .article .cite a { text-decoration: none; }
@@ -919,9 +907,6 @@ details p + p { margin-top: -8px; }
 .foot-cols a:hover, .foot-cols .link-btn:hover { color: var(--text); }
 .foot .foot-legal { margin: 0; }
 
-@media (max-width: 960px) {
-  .research-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
 @media (max-width: 820px) {
   .uses-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -929,6 +914,13 @@ details p + p { margin-top: -8px; }
   .foot-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 20px; }
 }
 @media (max-width: 520px) {
-  .research-grid { grid-template-columns: 1fr; }
   .uses-grid { grid-template-columns: 1fr; }
 }
+
+/* ---- Research page findings ---- */
+.article .findings { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 8px 0 24px; }
+.article .finding { background: var(--card); border-radius: 18px; padding: 22px; }
+.article .finding p { margin: 0; font-size: 15px; }
+.article .finding .finding-stat { margin: 0 0 8px; color: var(--text); font-size: 30px; line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; }
+#uses .uses-note { text-align: center; }
+@media (max-width: 640px) { .article .findings { grid-template-columns: 1fr; } }
