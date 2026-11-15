@@ -24,7 +24,50 @@
 <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=14">
+<link rel="stylesheet" href="style.css?v=15">
+<style>
+/* Video Screencast Container Sizing */
+.demo-video-wrapper {
+  margin: 28px auto 40px;
+  max-width: 620px;
+  width: 100%;
+}
+.mac-window-frame {
+  background: #1c1c1e;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+.mac-titlebar {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  background: rgba(38, 38, 42, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.traffic-lights {
+  display: flex;
+  gap: 7px;
+}
+.traffic-lights .dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.traffic-lights .dot.red { background: #ff5f56; }
+.traffic-lights .dot.yellow { background: #ffbd2e; }
+.traffic-lights .dot.green { background: #27c93f; }
+.screencast-video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: #000;
+  border-radius: 0 0 14px 14px;
+}
+</style>
 <script src="https://cdn.paddle.com/paddle/v2/paddle.js" defer></script>
 <script type="application/ld+json">
 {
@@ -699,7 +742,7 @@ details p + p { margin-top: -8px; }
       <p style="color: var(--muted); font-size: 18px; margin-top: 10px;">No cheats. No loopholes. Watch how Vow holds the line.</p>
     </div>
 
-    <!-- Native Apple-Style Video Player (Zero YouTube branding) -->
+    <!-- Native Apple-Style Video Player (No Autoplay, Sized) -->
     <div class="demo-video-wrapper">
       <div class="mac-window-frame">
         <div class="mac-titlebar">
@@ -708,9 +751,8 @@ details p + p { margin-top: -8px; }
             <span class="dot yellow"></span>
             <span class="dot green"></span>
           </div>
-          <div class="badge-live">Silent Loop</div>
         </div>
-        <video class="screencast-video" autoplay loop muted playsinline controls poster="/videos/vow-apple-take-poster.jpg">
+        <video class="screencast-video" playsinline controls preload="metadata" poster="/videos/vow-apple-take-poster.jpg">
           <source src="/videos/vow-apple-take.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
