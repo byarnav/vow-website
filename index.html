@@ -650,7 +650,7 @@ details p + p { margin-top: -8px; }
 
       <div class="actions hero-actions">
         <a class="btn primary" href="#pricing" data-paddle-checkout>Buy Vow &middot; <span data-price-text>$9.99</span></a>
-        <a class="btn secondary" href="https://raw.githubusercontent.com/byarnav/offline-lock-releases/main/Vow.dmg">Try it free</a>
+        <a class="btn secondary" href="https://raw.githubusercontent.com/byarnav/offline-lock-releases/main/Vow.dmg" download="Vow.dmg">Try it free</a>
       </div>
       <p class="fine">5 minutes to 24 hours &middot; 3 free sessions, then <span data-price-text>$9.99</span> once &middot; No subscription &middot; macOS 26+, Apple Silicon</p>
 
@@ -692,18 +692,40 @@ details p + p { margin-top: -8px; }
     </div>
   </section>
 
-  <!-- It Stays (Apple Feature Spec List) -->
-  <section class="wrap">
-    <div class="section-head">
+  <!-- It Stays (Apple Feature Spec List + Native Screencast) -->
+  <section class="wrap-wide" id="proof">
+    <div class="section-head" style="max-width: 780px; margin-left: auto; margin-right: auto; text-align: center;">
       <h2>Once you make a Vow, it stays.</h2>
+      <p style="color: var(--muted); font-size: 18px; margin-top: 10px;">No cheats. No loopholes. Watch how Vow holds the line.</p>
     </div>
-    <dl class="list">
-      <div><dt>It survives everything</dt><dd>Quitting Vow or restarting your Mac won't bring the internet back.</dd></div>
-      <div><dt>Every connection</dt><dd>Wi-Fi, Ethernet, USB adapters and iPhone hotspots are all turned off. Plugging in a cable won't get around it.</dd></div>
-      <div><dt>No cancel button</dt><dd>Need out early? You can ask, but your Mac stays offline for 15 more minutes first. Usually the urge passes.</dd></div>
-      <div><dt>Your Mac still works</dt><dd>Files, apps and local AI models keep working. If you code, localhost and local containers (via localhost ports) keep working too.</dd></div>
-      <div><dt>Safe if something breaks</dt><dd>If Vow's saved session is ever damaged, it gives your internet back instead of leaving you stuck.</dd></div>
-    </dl>
+
+    <!-- Native Apple-Style Video Player (Zero YouTube branding) -->
+    <div class="demo-video-wrapper">
+      <div class="mac-window-frame">
+        <div class="mac-titlebar">
+          <div class="traffic-lights">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="badge-live">Silent Loop</div>
+        </div>
+        <video class="screencast-video" autoplay loop muted playsinline controls poster="/videos/vow-apple-take-poster.jpg">
+          <source src="/videos/vow-apple-take.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div class="wrap" style="padding-left: 0; padding-right: 0;">
+      <dl class="list">
+        <div><dt>It survives everything</dt><dd>Quitting Vow or restarting your Mac won't bring the internet back.</dd></div>
+        <div><dt>Every connection</dt><dd>Wi-Fi, Ethernet, USB adapters and iPhone hotspots are all turned off. Plugging in a cable won't get around it.</dd></div>
+        <div><dt>No cancel button</dt><dd>Need out early? You can ask, but your Mac stays offline for 15 more minutes first. Usually the urge passes.</dd></div>
+        <div><dt>Your Mac still works</dt><dd>Files, apps and local AI models keep working. If you code, localhost and local containers (via localhost ports) keep working too.</dd></div>
+        <div><dt>Safe if something breaks</dt><dd>If Vow's saved session is ever damaged, it gives your internet back instead of leaving you stuck.</dd></div>
+      </dl>
+    </div>
   </section>
 
   <!-- Uses: what people want to block -->
@@ -796,7 +818,7 @@ details p + p { margin-top: -8px; }
         </ul>
         <div class="actions buy-actions">
           <button type="button" class="btn primary" data-paddle-checkout>Buy Vow &middot; <span data-price-text>$9.99</span></button>
-          <a class="btn secondary" href="https://raw.githubusercontent.com/byarnav/offline-lock-releases/main/Vow.dmg">Try 3 Sessions Free</a>
+          <a class="btn secondary" href="https://raw.githubusercontent.com/byarnav/offline-lock-releases/main/Vow.dmg" download="Vow.dmg">Try 3 Sessions Free</a>
         </div>
         <p class="buy-status fine" role="status" aria-live="polite"></p>
         <p class="fine buy-disclaimer">Secure checkout by Paddle, our merchant of record. macOS 26 or later, Apple Silicon.</p>
@@ -913,7 +935,7 @@ details p + p { margin-top: -8px; }
           <li><a href="/#pricing">Pricing</a></li>
           <li><a href="/#faq">FAQ</a></li>
           <li><a href="/changelog/">Changelog</a></li>
-          <li><a href="https://raw.githubusercontent.com/byarnav/offline-lock-releases/main/Vow.dmg">Download free</a></li>
+          <li><a href="https://raw.githubusercontent.com/byarnav/offline-lock-releases/main/Vow.dmg" download="Vow.dmg">Download free</a></li>
           <li><a href="/freedom-alternative/">Vow vs Freedom</a></li>
           <li><a href="/cold-turkey-alternative/">Vow vs Cold Turkey</a></li>
           <li><a href="/selfcontrol-alternative/">Vow vs SelfControl</a></li>
