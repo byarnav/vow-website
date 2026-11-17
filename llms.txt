@@ -45,3 +45,7 @@ Vow is not a website blocklist. It takes the whole Mac offline, so every browser
 
 - Email: support@byarnav.com
 - Publisher: byArnav (https://byarnav.com)
+- X: https://x.com/byarnavapps
+- YouTube: https://www.youtube.com/@by-arnav
+- Instagram: https://www.instagram.com/byarnavapps/
+- GitHub: https://github.com/byarnav
