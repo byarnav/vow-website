@@ -51,7 +51,7 @@
       "headline": "Vow vs SelfControl: blocking the whole internet instead of a list",
       "description": "Vow vs SelfControl: blocking the whole internet vs a website blocklist, early unlock, schedules and requirements. SelfControl is free and open source.",
       "datePublished": "2026-11-05",
-      "dateModified": "2026-11-05",
+      "dateModified": "2026-11-20",
       "inLanguage": "en",
       "author": {
         "@type": "Organization",
@@ -112,7 +112,7 @@
           "name": "Is SelfControl compatible with VPNs?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, SelfControl will not block websites properly if you're using a VPN. This is not technically feasible, unfortunately. If you are using a \"partial VPN\" like Junos Pulse Secure or Cisco AnyConnect to connect to corporate/university servers, please ensure it is disconnected while SelfControl runs. These applications have a tendency to save your networking state when they connect and restore to that state when they disconnect - so if you turn them on while SelfControl's running, and turn them off after it finishes, your block may \"mysteriously\" come back."
+            "text": "SelfControl notes in its documentation that website blocklists do not work reliably alongside VPNs, and some corporate VPN clients can get stuck if toggled mid-block. Vow cuts all external network traffic, including VPN tunnels, for the length of your timer, and restores your VPN settings untouched when the session ends."
           }
         }
       ]
@@ -208,10 +208,17 @@
     </details>
     <details>
       <summary>Is SelfControl compatible with VPNs?</summary>
-      <p>No, SelfControl will not block websites properly if you're using a VPN. This is not technically feasible, unfortunately.</p>
-      <p>If you are using a "partial VPN" like Junos Pulse Secure or Cisco AnyConnect to connect to corporate/university servers, please ensure it is disconnected while SelfControl runs. These applications have a tendency to save your networking state when they connect and restore to that state when they disconnect - so if you turn them on while SelfControl's running, and turn them off after it finishes, your block may "mysteriously" come back.</p>
+      <p>SelfControl notes in its documentation that website blocklists do not work reliably alongside VPNs, and some corporate VPN clients can get stuck if toggled mid-block.</p>
+      <p>Vow takes a simpler route: it cuts all external network traffic, including VPN tunnels, for the length of your timer. When your session ends, your VPN settings come back untouched.</p>
     </details>
   </div>
+  <h2 id="related">Related guides</h2>
+  <ul>
+    <li><a href="/free-internet-blocker-mac/">Free internet blockers for Mac (Screen Time, SelfControl and more)</a></li>
+    <li><a href="/cold-turkey-alternative/">Vow vs Cold Turkey for Mac</a></li>
+    <li><a href="/freedom-alternative/">Vow vs Freedom for Mac</a></li>
+    <li><a href="/block-internet-on-mac/">How to block the internet on a Mac for a set time</a></li>
+  </ul>
   <div class="article-cta">
     <h2>Try Vow free</h2>
     <p>Vow is a Mac app that turns off your internet and keeps it off until your timer ends, from 5 minutes to 24 hours. Try 3 full sessions free, then pay $9.99 once. Requires macOS 26 or later on Apple Silicon.</p>
